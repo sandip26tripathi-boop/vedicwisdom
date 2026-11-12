@@ -1,0 +1,18 @@
+{
+  "name": "vedic-wisdom-web",
+  "version": "1.0.0",
+  "description": "Vedic Wisdom - International Vastu & Astro-Vastu Consultancy Web Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "vastu",
+    "astro-vastu",
+    "kp-astrology",
+    "industrial-vastu",
+    "non-demolition"
+  ],
+  "author": "Vedic Wisdom",
+  "license": "ISC"
+}
