@@ -67,6 +67,38 @@
     .dark-gold-soft-gradient {
       background: linear-gradient(145deg, #161F33 0%, #101624 100%);
     }
+    
+    /* Premium Multi-Color Accent System (Gold, Light Green, Orange, Black, Red) */
+    .gold-gradient {
+      background: linear-gradient(135deg, #CCA04F 0%, #B58934 50%, #8C651A 100%);
+    }
+    .gold-metallic-text {
+      background: linear-gradient(135deg, #D4AF37 0%, #B58934 60%, #8C651A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .orange-gradient {
+      background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    }
+    .green-gradient {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    }
+    .red-gradient {
+      background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);
+    }
+    .black-obsidian-gradient {
+      background: linear-gradient(135deg, #18181B 0%, #09090B 100%);
+    }
+    .glow-gold {
+      box-shadow: 0 0 20px rgba(204, 160, 79, 0.25);
+    }
+    .glow-green {
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+    }
+    .glow-orange {
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+    }
+  
     /* Eye-friendly smooth drop shadow */
     .soft-shadow {
       box-shadow: 0 4px 20px -2px rgba(45, 35, 20, 0.05), 0 2px 6px -1px rgba(45, 35, 20, 0.02);
@@ -314,6 +346,11 @@
         id: "flat_apartment",
         title: "Flat & Apartment Vastu",
         tagline: "Non-Structural Spatial Alignment",
+        accentColor: "emerald",
+        badgeClass: "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border-emerald-300",
+        borderClass: "border-t-4 border-t-emerald-500",
+        iconBg: "bg-emerald-500",
+        icon: "🌿",
         desc: "Zonal rebalancing tailored specifically for fixed civil boundaries in modern high-rise residential apartments.",
         deliverables: [
           "16-Zone directional mapping on your apartment CAD layout",
@@ -350,6 +387,11 @@
         id: "house_villa",
         title: "Independent House & Villa Vastu",
         tagline: "Boundary-to-Core Energy Mapping",
+        accentColor: "amber",
+        badgeClass: "bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 border-amber-300",
+        borderClass: "border-t-4 border-t-amber-500",
+        iconBg: "bg-amber-500",
+        icon: "🏛️",
         desc: "Comprehensive spatial alignment from boundary perimeter to core Brahmasthan, encompassing multi-floor levels and water tanks.",
         deliverables: [
           "External boundary & main gate cardinal degree evaluation",
@@ -386,6 +428,11 @@
         id: "commercial_office",
         title: "Commercial & Office Vastu",
         tagline: "Executive Stability & Flow Dynamics",
+        accentColor: "stone",
+        badgeClass: "bg-stone-900 text-amber-300 dark:bg-black dark:text-amber-300 border-stone-700",
+        borderClass: "border-t-4 border-t-stone-800 dark:border-t-stone-500",
+        iconBg: "bg-stone-900",
+        icon: "🏢",
         desc: "Strategic workspace orientation focusing on leadership desk placement, accounts stability, client reception, and workforce productivity.",
         deliverables: [
           "Managing Director & key executive seating orientation",
@@ -422,6 +469,11 @@
         id: "kundli_advisory",
         title: "Classical Kundli Advisory",
         tagline: "KP Cuspal Interlinks & Transits",
+        accentColor: "orange",
+        badgeClass: "bg-orange-100 text-orange-900 dark:bg-orange-950 dark:text-orange-300 border-orange-300",
+        borderClass: "border-t-4 border-t-orange-500",
+        iconBg: "bg-orange-500",
+        icon: "☀️",
         desc: "Deep-dive predictive astrological consultation focusing on dasha transit milestones and practical decision horizons — free from fatalistic fear.",
         deliverables: [
           "High-precision Lahiri Ayanamsa natal chart computation",
@@ -458,6 +510,11 @@
         id: "astro_vastu",
         title: "Integrated Astro-Vastu Review",
         tagline: "Personal Natal & Space Synergy",
+        accentColor: "rose",
+        badgeClass: "bg-rose-100 text-rose-900 dark:bg-rose-950 dark:text-rose-300 border-rose-300",
+        borderClass: "border-t-4 border-t-rose-500",
+        iconBg: "bg-rose-600",
+        icon: "🔥",
         desc: "Synchronizing an individual’s ruling planetary dasha with the cardinal zones of their actual living space for cohesive harmony.",
         deliverables: [
           "Combined examination of birth dasha and residence floor plan",
@@ -554,22 +611,30 @@
         <div className={`min-h-screen ${bgMain} selection:bg-[#B58934] selection:text-white transition-colors duration-300`}>
           
           {/* TOP ANNOUNCEMENT BAR */}
-          <div className={`${isDark ? 'bg-[#05070D] border-[#B58934]/15' : 'bg-[#EAE5DA] border-[#DDD7CA]'} border-b py-2 px-4 text-xs`}>
+          <div className={`${isDark ? 'bg-[#06080F] border-amber-500/20 text-stone-300' : 'bg-[#18181B] border-stone-800 text-stone-200'} border-b py-2 px-4 text-xs`}>
             <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-              <div className="flex items-center space-x-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-                <span className={mutedText}>
-                  Global Consultancy Desk Open • Transparent Dual Pricing: <strong className="text-[#946B1D] dark:text-[#CCA04F]">₹ INR (India)</strong> & <strong className="text-[#946B1D] dark:text-[#CCA04F]">$ USD (International)</strong>
+              <div className="flex items-center space-x-2.5">
+                <span className="flex h-2.5 w-2.5 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span className="font-medium tracking-wide">
+                  <strong className="text-emerald-400 font-bold uppercase tracking-wider text-[11px] mr-1.5">[Live Desk]</strong>
+                  Bhopal Central Research Desk Open • Serving <span className="text-amber-300 font-bold">Pan-India</span>, <span className="text-orange-400 font-bold">UAE</span> & <span className="text-amber-300 font-bold">GCC Hubs</span>
                 </span>
               </div>
-              <div className="flex items-center space-x-4">
-                <a href="mailto:ask.vedicwisdom@gmail.com" className={`hover:text-[#946B1D] transition flex items-center space-x-1 ${mutedText}`}>
+              <div className="flex items-center space-x-3 text-xs">
+                <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-rose-950/80 text-rose-300 border border-rose-700/60">
+                  ● 0% Civil Demolition
+                </span>
+                <a href="mailto:ask.vedicwisdom@gmail.com" className="hover:text-amber-300 transition text-stone-400 flex items-center space-x-1">
                   <span>✉</span>
                   <span>ask.vedicwisdom@gmail.com</span>
                 </a>
-                <span className="text-stone-300 dark:text-stone-700">|</span>
-                <a href="https://wa.me/919009448601" target="_blank" rel="noreferrer" className="text-[#946B1D] dark:text-[#CCA04F] hover:underline font-bold transition">
-                  WhatsApp: +91 90094 48601
+                <span className="text-stone-600">|</span>
+                <a href="https://wa.me/919009448601" target="_blank" rel="noreferrer" className="text-amber-400 hover:text-amber-300 font-bold transition flex items-center space-x-1">
+                  <span className="text-emerald-400">💬</span>
+                  <span>+91 90094 48601</span>
                 </a>
               </div>
             </div>
@@ -581,7 +646,7 @@
               
               {/* Brand Logo & Tagline */}
               <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
-                <div className="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center shadow-md text-white font-bold text-xl">
+                <div className="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center shadow-md text-white font-bold text-xl ring-2 ring-amber-400/40 glow-gold">
                   ✦
                 </div>
                 <div>
@@ -667,13 +732,22 @@
             <section id="hero" className={`relative pt-20 pb-28 px-4 md:px-8 border-b ${borderSubtle} overflow-hidden`}>
               <div className="max-w-5xl mx-auto text-center relative z-10">
                 
-                {/* Mode status indicator */}
-                <div className={`inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border mb-6 soft-shadow ${
-                  isDark ? 'border-[#B58934]/40 bg-[#111827]' : 'border-[#DDD7CA] bg-[#FAF8F4]'
-                }`}>
-                  <span className="text-[#946B1D] dark:text-[#CCA04F] text-xs">✦</span>
-                  <span className="text-[#735010] dark:text-[#CCA04F] text-xs font-semibold tracking-widest uppercase">
-                    International Vastu & Astro-Vastu Consultancy
+                {/* Mode status indicator with Multi-Color accents */}
+                <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full border border-amber-500/40 bg-[#FAF8F4] dark:bg-[#111622] soft-shadow mb-6">
+                  <span className="flex h-2 w-2 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-500 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
+                  </span>
+                  <span className="text-emerald-700 dark:text-emerald-400 font-bold text-xs uppercase tracking-wider">
+                    Non-Demolition Spatial Science
+                  </span>
+                  <span className="text-stone-300 dark:text-stone-600">•</span>
+                  <span className="text-amber-700 dark:text-amber-400 font-bold text-xs uppercase tracking-wider">
+                    KP Cuspal Analytics
+                  </span>
+                  <span className="text-stone-300 dark:text-stone-600">•</span>
+                  <span className="text-stone-600 dark:text-stone-400 text-xs font-semibold">
+                    Research Desk Bhopal
                   </span>
                 </div>
 
@@ -796,14 +870,17 @@
                 {ADVISORY_PACKAGES.map((pkg, idx) => (
                   <div
                     key={pkg.id}
-                    className={`rounded-2xl p-6 border flex flex-col justify-between transition relative hover:border-[#B58934] ${
+                    className={`rounded-2xl p-6 border flex flex-col justify-between transition relative hover:border-[#B58934] ${pkg.borderClass} ${
                       idx === 1 || idx === 4 ? cardHighlight : cardBg
                     }`}
                   >
                     <div>
-                      <span className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] uppercase tracking-widest block mb-1">
-                        {pkg.tagline}
-                      </span>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${pkg.badgeClass}`}>
+                          {pkg.tagline}
+                        </span>
+                        <span className="text-lg">{pkg.icon}</span>
+                      </div>
                       <h4 className={`text-xl font-serif font-bold mb-2 leading-snug ${headingText}`}>
                         {pkg.title}
                       </h4>
@@ -901,7 +978,7 @@
                   <div className={`p-8 rounded-2xl border relative flex flex-col justify-between ${cardBg}`}>
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-blue-100 dark:bg-blue-950 text-blue-800 dark:text-blue-300">
+                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-orange-100 dark:bg-orange-950 text-orange-800 dark:text-orange-300 border border-orange-300">
                           Online Step
                         </span>
                         <span className="font-mono font-bold text-2xl text-[#946B1D] dark:text-[#CCA04F]">
@@ -928,7 +1005,7 @@
                   <div className={`p-8 rounded-2xl border relative flex flex-col justify-between ${cardHighlight}`}>
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300">
+                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-stone-900 text-amber-300 border border-amber-500/40">
                           Offline Research Desk
                         </span>
                         <span className="font-mono font-bold text-2xl text-[#946B1D] dark:text-[#CCA04F]">
@@ -955,7 +1032,7 @@
                   <div className={`p-8 rounded-2xl border relative flex flex-col justify-between ${cardBg}`}>
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">
+                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-400">
                           On-Site Offline Execution
                         </span>
                         <span className="font-mono font-bold text-2xl text-[#946B1D] dark:text-[#CCA04F]">
@@ -981,11 +1058,13 @@
                 </div>
 
                 {/* Bottom Callout Banner */}
-                <div className={`mt-12 p-8 md:p-10 rounded-2xl border flex flex-col md:flex-row items-center justify-between gap-6 ${cardHighlight}`}>
+                <div className="mt-12 p-8 md:p-10 rounded-2xl border-2 border-[#CCA04F] bg-gradient-to-r from-[#0C101A] via-[#161C2B] to-[#0A0D15] text-white flex flex-col md:flex-row items-center justify-between gap-6 glow-gold shadow-2xl">
                   <div className="max-w-2xl text-center md:text-left">
-                    <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest gold-gradient text-white inline-block mb-3">
-                      Serving Pan-India, UAE & Global GCC Hubs
-                    </span>
+                    <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-stone-900/90 text-amber-300 border border-amber-400/50 mb-3">
+                      <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                      <span>Serving Pan-India, UAE & Global GCC Hubs</span>
+                    </div>
+                    <h4 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-white">
                     <h4 className={`text-2xl md:text-3xl font-serif font-bold mb-2 ${headingText}`}>
                       Ready to Request an Offline Factory or Kundli Verification?
                     </h4>
@@ -1600,8 +1679,12 @@
                           <div className="sm:w-1/6 text-left sm:text-right">
                             <span className={`px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider inline-block ${
                               obs.status === 'Balanced' || obs.status === 'Optimal'
-                                ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
-                                : 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300'
+                                ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300'
+                                : obs.status === 'Reinforced' || obs.status === 'Synchronized'
+                                ? 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-300'
+                                : obs.status === 'Neutralized' || obs.status === 'Harmonized'
+                                ? 'bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-300 border border-orange-300'
+                                : 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 border border-rose-300'
                             }`}>
                               {obs.status}
                             </span>
