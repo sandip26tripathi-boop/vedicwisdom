@@ -50,6 +50,54 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
   <style>
+    /* Ultra-Crisp Sharp Typography Rendering */
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-size: 17px;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      font-weight: 450;
+      letter-spacing: -0.01em;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+      touch-action: manipulation;
+    }
+    
+    /* Vastu Purusha Sacred Geometric Watermark */
+    .vastu-watermark-bg {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgODAwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgZmlsbD0ibm9uZSI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9ImdvbGRHbG93IiBjeD0iNTAlIiBjeT0iNTAlIiByPSI1MCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjQ0NBMDRGIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQ0NBMDRGIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gT3V0ZXIgU2FjcmVkIENpcmNsZXMgJiBPY3RhZ29uIC0tPgogIDxjaXJjbGUgY3g9IjQwMCIgY3k9IjQwMCIgcj0iMzgwIiBzdHJva2U9IiNDQ0EwNEYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iOCA2Ii8+CiAgPGNpcmNsZSBjeD0iNDAwIiBjeT0iNDAwIiByPSIzNTAiIHN0cm9rZT0iI0I1ODkzNCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8Y2lyY2xlIGN4PSI0MDAiIGN5PSI0MDAiIHI9IjMzMCIgc3Ryb2tlPSIjQ0NBMDRGIiBzdHJva2Utd2lkdGg9IjEiLz4KICAKICA8IS0tIDl4OSBWYXN0dSBNYW5kYWxhIEdyaWQgKDgxIFBhZGFzKSAtLT4KICA8ZyBzdHJva2U9IiNDQ0EwNEYiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjYiPgogICAgPCEtLSBPdXRlciBTcXVhcmUgLS0+CiAgICA8cmVjdCB4PSIxMzAiIHk9IjEzMCIgd2lkdGg9IjU0MCIgaGVpZ2h0PSI1NDAiIHN0cm9rZT0iI0I1ODkzNCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8IS0tIDkgSG9yaXpvbnRhbCBMaW5lcyAtLT4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSIxOTAiIHgyPSI2NzAiIHkyPSIxOTAiLz4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSIyNTAiIHgyPSI2NzAiIHkyPSIyNTAiLz4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSIzMTAiIHgyPSI2NzAiIHkyPSIzMTAiLz4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSIzNzAiIHgyPSI2NzAiIHkyPSIzNzAiLz4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSI0MzAiIHgyPSI2NzAiIHkyPSI0MzAiLz4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSI0OTAiIHgyPSI2NzAiIHkyPSI0OTAiLz4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSI1NTAiIHgyPSI2NzAiIHkyPSI1NTAiLz4KICAgIDxsaW5lIHgxPSIxMzAiIHkxPSI2MTAiIHgyPSI2NzAiIHkyPSI2MTAiLz4KICAgIDwhLS0gOSBWZXJ0aWNhbCBMaW5lcyAtLT4KICAgIDxsaW5lIHgxPSIxOTAiIHkxPSIxMzAiIHgyPSIxOTAiIHkyPSI2NzAiLz4KICAgIDxsaW5lIHgxPSIyNTAiIHkxPSIxMzAiIHgyPSIyNTAiIHkyPSI2NzAiLz4KICAgIDxsaW5lIHgxPSIzMTAiIHkxPSIxMzAiIHgyPSIzMTAiIHkyPSI2NzAiLz4KICAgIDxsaW5lIHgxPSIzNzAiIHkxPSIxMzAiIHgyPSIzNzAiIHkyPSI2NzAiLz4KICAgIDxsaW5lIHgxPSI0MzAiIHkxPSIxMzAiIHgyPSI0MzAiIHkyPSI2NzAiLz4KICAgIDxsaW5lIHgxPSI0OTAiIHkxPSIxMzAiIHgyPSI0OTAiIHkyPSI2NzAiLz4KICAgIDxsaW5lIHgxPSI1NTAiIHkxPSIxMzAiIHgyPSI1NTAiIHkyPSI2NzAiLz4KICAgIDxsaW5lIHgxPSI2MTAiIHkxPSIxMzAiIHgyPSI2MTAiIHkyPSI2NzAiLz4KICA8L2c+CgogIDwhLS0gQ2VudHJhbCBCcmFobWFzdGhhbiAzeDMgSGlnaGxpZ2h0IC0tPgogIDxyZWN0IHg9IjMxMCIgeT0iMzEwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgZmlsbD0idXJsKCNnb2xkR2xvdykiIHN0cm9rZT0iI0I1ODkzNCIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8Y2lyY2xlIGN4PSI0MDAiIGN5PSI0MDAiIHI9IjkwIiBzdHJva2U9IiNDQ0EwNEYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtZGFzaGFycmF5PSI0IDQiLz4KICA8Y2lyY2xlIGN4PSI0MDAiIGN5PSI0MDAiIHI9IjIwIiBmaWxsPSIjQjU4OTM0IiBmaWxsLW9wYWNpdHk9IjAuMyIgc3Ryb2tlPSIjQ0NBMDRGIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI0MDAiIGN5PSI0MDAiIHI9IjUiIGZpbGw9IiNCNTg5MzQiLz4KCiAgPCEtLSBEaWFnb25hbCBFbmVyZ3kgVmVjdG9ycyAoS2FybmEgU3V0cmEpIC0tPgogIDxsaW5lIHgxPSIxMzAiIHkxPSIxMzAiIHgyPSI2NzAiIHkyPSI2NzAiIHN0cm9rZT0iI0I1ODkzNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjYgNCIvPgogIDxsaW5lIHgxPSI2NzAiIHkxPSIxMzAiIHgyPSIxMzAiIHkyPSI2NzAiIHN0cm9rZT0iI0I1ODkzNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjYgNCIvPgogIDxsaW5lIHgxPSI0MDAiIHkxPSI1MCIgeDI9IjQwMCIgeTI9Ijc1MCIgc3Ryb2tlPSIjQ0NBMDRGIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjMgMyIvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjQwMCIgeDI9Ijc1MCIgeTI9IjQwMCIgc3Ryb2tlPSIjQ0NBMDRGIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjMgMyIvPgoKICA8IS0tIFZhc3R1IFB1cnVzaGEgQ29zbWljIEJvZHkgU2lsaG91ZXR0ZSAoSGVhZCBpbiBORSAvIDEzMCwxMzA7IEZlZXQgaW4gU1cgLyA2NzAsNjcwKSAtLT4KICA8ZyBzdHJva2U9IiNCNTg5MzQiIHN0cm9rZS13aWR0aD0iMS44IiBvcGFjaXR5PSIwLjc1IiBmaWxsPSJub25lIj4KICAgIDwhLS0gSGVhZCBpbiBOb3J0aC1FYXN0ICh0b3AtcmlnaHQgb3JpZW50YXRpb24gcmVsYXRpdmUgdG8gY2FyZGluYWwpIC0tPgogICAgPGNpcmNsZSBjeD0iMjMwIiBjeT0iMjMwIiByPSIzMiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSIjQ0NBMDRGIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgogICAgPCEtLSBDcm93biAvIFNoaWtoYSAtLT4KICAgIDxwYXRoIGQ9Ik0yMzAgMTk4IFEyMjAgMTgwIDIzMCAxNjUgUTI0MCAxODAgMjMwIDE5OCIgZmlsbD0iI0I1ODkzNCIgZmlsbC1vcGFjaXR5PSIwLjMiLz4KICAgIDwhLS0gU3BpbmUgTGluZSAoQnJhaG1hIFN1dHJhIGRvd24gdG93YXJkcyBTVykgLS0+CiAgICA8cGF0aCBkPSJNMjMwIDI2MiBRMzE1IDMxNSA0MDAgNDAwIFE0ODUgNDg1IDU3MCA1NzAiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICA8IS0tIEFybXMgc3RyZXRjaGVkIHRvIE5XIGFuZCBTRSAtLT4KICAgIDwhLS0gTGVmdCBBcm0gdG93YXJkcyBOVyAoMTMwLCA0MDApIC0tPgogICAgPHBhdGggZD0iTTI2MCAyOTAgUTIyMCAzNjAgMTcwIDMzMCBRMTQwIDMxMCAxNjAgMjYwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPCEtLSBSaWdodCBBcm0gdG93YXJkcyBTRSAoNDAwLCAxMzApIC0tPgogICAgPHBhdGggZD0iTTI5MCAyNjAgUTM2MCAyMjAgMzMwIDE3MCBRMzEwIDE0MCAyNjAgMTYwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPCEtLSBLbmVlcyBmb2xkZWQgb3V0d2FyZCB0b3dhcmRzIEUgYW5kIE4gLS0+CiAgICA8cGF0aCBkPSJNNTQwIDU0MCBRNjIwIDQ4MCA1ODAgNDMwIFE1NDAgNDAwIDUwMCA0NTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8cGF0aCBkPSJNNTQwIDU0MCBRNDgwIDYyMCA0MzAgNTgwIFE0MDAgNTQwIDQ1MCA1MDAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8IS0tIEZlZXQgam9pbmVkIGluIFNvdXRoLVdlc3QgKE5haXJ1dHlhIGNvcm5lcikgLS0+CiAgICA8Y2lyY2xlIGN4PSI1ODAiIGN5PSI1ODAiIHI9IjE2IiBmaWxsPSIjQjU4OTM0IiBmaWxsLW9wYWNpdHk9IjAuMiIvPgogIDwvZz4KCiAgPCEtLSA4IENhcmRpbmFsIERpcmVjdGlvbiBNYXJrZXJzIC0tPgogIDx0ZXh0IHg9IjQwMCIgeT0iMzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNCNTg5MzQiIGZvbnQtZmFtaWx5PSInUGx1cyBKYWthcnRhIFNhbnMnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCIgbGV0dGVyLXNwYWNpbmc9IjMiPk5PUlRIIChLVUJFUkEpPC90ZXh0PgogIDx0ZXh0IHg9Ijc2NSIgeT0iNDA1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjQjU4OTM0IiBmb250LWZhbWlseT0iJ1BsdXMgSmFrYXJ0YSBTYW5zJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIzIj5FQVNUIChJTkRSQSk8L3RleHQ+CiAgPHRleHQgeD0iNDAwIiB5PSI3ODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNCNTg5MzQiIGZvbnQtZmFtaWx5PSInUGx1cyBKYWthcnRhIFNhbnMnLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCIgbGV0dGVyLXNwYWNpbmc9IjMiPlNPVVRIIChZQU1BKTwvdGV4dD4KICA8dGV4dCB4PSIzNSIgeT0iNDA1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjQjU4OTM0IiBmb250LWZhbWlseT0iJ1BsdXMgSmFrYXJ0YSBTYW5zJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIzIj5XRVNUIChWQVJVTkEpPC90ZXh0PgoKICA8dGV4dCB4PSI2ODAiIHk9IjEyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0I1ODkzNCIgZm9udC1mYW1pbHk9IidQbHVzIEpha2FydGEgU2FucycsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIj5ORSAoSVNIQU4pPC90ZXh0PgogIDx0ZXh0IHg9IjY4MCIgeT0iNjk1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjQjU4OTM0IiBmb250LWZhbWlseT0iJ1BsdXMgSmFrYXJ0YSBTYW5zJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiPlNFIChBR05JKTwvdGV4dD4KICA8dGV4dCB4PSIxMjAiIHk9IjY5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0I1ODkzNCIgZm9udC1mYW1pbHk9IidQbHVzIEpha2FydGEgU2FucycsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIj5TVyAoTkFJUlVUWUEpPC90ZXh0PgogIDx0ZXh0IHg9IjEyMCIgeT0iMTIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjQjU4OTM0IiBmb250LWZhbWlseT0iJ1BsdXMgSmFrYXJ0YSBTYW5zJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiPk5XIChWQVlVKTwvdGV4dD4KPC9zdmc+');
+      background-repeat: no-repeat;
+      background-position: center 250px;
+      background-size: min(900px, 90vw);
+      background-attachment: fixed;
+    }
+    .dark .vastu-watermark-bg {
+      filter: invert(1) hue-rotate(180deg) brightness(0.65);
+      opacity: 0.08;
+    }
+    
+    /* Razor-sharp heading font */
+    h1, h2, h3, h4, h5, .font-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Floating Quick Nav Pill animation */
+    @keyframes floatPulse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .floating-nav-pulse {
+      animation: floatPulse 3s ease-in-out infinite;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 16px;
@@ -564,6 +612,8 @@
       const [bookingSuccess, setBookingSuccess] = useState(null);
       const [contactSuccess, setContactSuccess] = useState(null);
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [quickJumpOpen, setQuickJumpOpen] = useState(false);
+      const [currency, setCurrency] = useState("USD");
 
       const scrollToSection = (id) => {
         setMobileMenuOpen(false);
@@ -596,7 +646,7 @@
 
       // EYE-FRIENDLY WARM LIGHT YELLOW & CREAM LUXURY PALETTE
       // Light Mode: Warm Sandalwood Cream (#FAF5E6 / #FBF7EC), Luminous Butter-Cream (#FFFDF7), Soft Golden Divider (#E2D7BA), Deep Warm Espresso Text (#26211A)
-      const bgMain = isDark ? "bg-[#0A0E17] text-[#FAF9F6]" : "bg-[#FAF5E6] text-[#26211A]";
+      const bgMain = isDark ? "bg-[#0A0E17] text-[#FDFCFB]" : "bg-[#FAF5E6] text-[#1B1610]";
       const bgAlt = isDark ? "bg-[#060910]" : "bg-[#F3ECCE]";
       const cardBg = isDark ? "bg-[#101624] border-[#B58934]/25 shadow-md" : "bg-[#FFFDF7] border-[#E2D7BA] shadow-sm";
       const cardHighlight = isDark 
@@ -604,13 +654,13 @@
         : "bg-[#FFFDF0] border-[#CCA04F]/60 shadow-md";
       const headerBg = isDark ? "bg-[#0A0E17]/95 border-[#B58934]/25" : "bg-[#FAF5E6]/95 border-[#E2D7BA] shadow-sm";
       const borderSubtle = isDark ? "border-[#B58934]/25" : "border-[#E2D7BA]";
-      const headingText = isDark ? "text-white" : "text-[#26211A]";
-      const bodyText = isDark ? "text-[#DDD7CA]" : "text-[#3D352A]";
-      const mutedText = isDark ? "text-stone-400" : "text-[#5E5343]";
+      const headingText = isDark ? "text-white font-bold" : "text-[#18130C] font-bold";
+      const bodyText = isDark ? "text-[#E6E0CE]" : "text-[#241E15] font-medium";
+      const mutedText = isDark ? "text-stone-300" : "text-[#473E31] font-medium";
       const inputBg = isDark ? "bg-[#060910] border-[#B58934]/35 text-white" : "bg-[#FAF5E6] border-[#E2D7BA] text-[#26211A]";
 
       return (
-        <div className={`min-h-screen ${bgMain} selection:bg-[#B58934] selection:text-white transition-colors duration-300`}>
+        <div className={`min-h-screen ${bgMain} relative selection:bg-[#B58934] selection:text-white transition-colors duration-300 vastu-watermark-bg selection:bg-[#B58934] selection:text-white transition-colors duration-300`}>
           
           {/* TOP ANNOUNCEMENT BAR */}
           <div className={`${isDark ? 'bg-[#06080F] border-amber-500/20 text-stone-300' : 'bg-[#211C14] border-stone-800 text-stone-200'} border-b py-2 px-4 text-xs`}>
@@ -727,6 +777,55 @@
               </div>
             )}
           </header>
+
+          
+          {/* DEDICATED QUICK-JUMP MENU BAR (One-Tap Section Jumper) */}
+          <div className={`sticky top-[69px] z-40 border-b py-2 px-3 backdrop-blur-md transition-all shadow-sm ${
+            isDark ? 'bg-[#0E131F]/90 border-amber-500/20' : 'bg-[#F4EED8]/95 border-[#DFD4B5]'
+          }`}>
+            <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto no-scrollbar py-0.5 text-xs">
+              <div className="flex items-center space-x-1 flex-nowrap shrink-0">
+                <span className="font-bold text-[#8C651A] dark:text-[#CCA04F] uppercase tracking-wider text-[11px] mr-1 flex items-center">
+                  <span>⚡ Quick Jump:</span>
+                </span>
+                
+                {[
+                  { id: 'advisory', label: 'Advisory Plans', icon: '📋' },
+                  { id: 'workflow', label: 'Offline Model', icon: '📍' },
+                  { id: 'compass', label: 'Vastu Compass', icon: '🧭' },
+                  { id: 'leadership', label: 'Leadership', icon: '🏛️' },
+                  { id: 'academy', label: 'Academy', icon: '🎓' },
+                  { id: 'reviews', label: 'Reviews', icon: '⭐' },
+                  { id: 'faqs', label: 'FAQs', icon: '❓' },
+                  { id: 'booking', label: 'Book Audit', icon: '📅', highlight: true },
+                  { id: 'contact', label: 'Contact', icon: '📞' }
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`px-3 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition flex items-center space-x-1 ${
+                      item.highlight
+                        ? 'gold-gradient text-white shadow-sm'
+                        : isDark
+                        ? 'bg-[#182030] text-stone-200 hover:bg-[#202B40] hover:text-amber-300 border border-stone-800'
+                        : 'bg-[#FFFDF7] text-[#241E15] hover:bg-[#FAF3DF] hover:text-[#8C651A] border border-[#E2D7BA] shadow-2xs'
+                    }`}
+                  >
+                    <span>{item.icon}</span>
+                    <span>{item.label}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* International Timezone & Currency Quick Pill */}
+              <div className="hidden lg:flex items-center space-x-2 shrink-0 pl-3 border-l border-stone-300 dark:border-stone-700 text-[11px]">
+                <span className="font-bold text-stone-600 dark:text-stone-300">Global Desk:</span>
+                <span className="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-300">
+                  IST • GST/UAE • GMT • EST • SGT
+                </span>
+              </div>
+            </div>
+          </div>
 
           <main>
             
@@ -853,6 +952,62 @@
             </section>
 
             
+            
+            {/* INTERNATIONAL CLIENT REASSURANCE & PRIVACY ACCORD */}
+            <section className={`py-8 px-4 md:px-8 border-b ${borderSubtle} ${bgAlt}`}>
+              <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+                
+                <div className={`p-4 rounded-xl border flex items-start space-x-3 ${cardBg}`}>
+                  <span className="text-2xl">🌍</span>
+                  <div>
+                    <h5 className="font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider text-[11px] mb-1">
+                      Multi-Timezone Scheduling
+                    </h5>
+                    <p className={`leading-snug ${mutedText}`}>
+                      Live video consultations scheduled in IST, UAE/GST, BST, US EST/PST & Singapore Time.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={`p-4 rounded-xl border flex items-start space-x-3 ${cardBg}`}>
+                  <span className="text-2xl">🔒</span>
+                  <div>
+                    <h5 className="font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider text-[11px] mb-1">
+                      Strict NDA & Privacy
+                    </h5>
+                    <p className={`leading-snug ${mutedText}`}>
+                      100% confidential case dossiers and non-disclosure protocols for HNW estates & enterprises.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={`p-4 rounded-xl border flex items-start space-x-3 ${cardBg}`}>
+                  <span className="text-2xl">📐</span>
+                  <div>
+                    <h5 className="font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider text-[11px] mb-1">
+                      Metric & Imperial CAD Audits
+                    </h5>
+                    <p className={`leading-snug ${mutedText}`}>
+                      Seamless floorplan evaluation across Sq. Meters, Sq. Feet, Acres & Hectares.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={`p-4 rounded-xl border flex items-start space-x-3 ${cardBg}`}>
+                  <span className="text-2xl">✈️</span>
+                  <div>
+                    <h5 className="font-bold text-stone-900 dark:text-stone-100 uppercase tracking-wider text-[11px] mb-1">
+                      Global On-Site Delegations
+                    </h5>
+                    <p className={`leading-snug ${mutedText}`}>
+                      Senior Vastu engineers fly for direct on-site calibration across GCC, Europe & APAC.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
             {/* 2. PROPERTY-SPECIFIC NICHE ADVISORY */}
             <section id="advisory" className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
               <div className="text-center max-w-3xl mx-auto mb-14">
@@ -1796,6 +1951,72 @@
               </div>
             </div>
           )}
+
+        
+          {/* FLOATING ACTION PILL: QUICK JUMP MENU & WHATSAPP */}
+          <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end space-y-2.5">
+            
+            {/* Quick Jump Drawer Button */}
+            <button
+              onClick={() => setQuickJumpOpen(!quickJumpOpen)}
+              className="px-4 py-3 rounded-full gold-gradient text-white font-bold text-xs uppercase tracking-wider shadow-2xl flex items-center space-x-2 hover:scale-105 transition border-2 border-amber-300 floating-nav-pulse"
+              title="Jump to any section"
+            >
+              <span className="text-sm">⚡</span>
+              <span>Menu / Jump</span>
+              <span className="text-[10px] bg-black/25 px-1.5 py-0.5 rounded-full">{quickJumpOpen ? '✕' : '▼'}</span>
+            </button>
+
+            {/* Floating Jump Menu Drawer Modal */}
+            {quickJumpOpen && (
+              <div className={`w-64 p-4 rounded-2xl border shadow-2xl animate-fadeIn ${cardBg} border-amber-400/50`}>
+                <div className="flex items-center justify-between pb-2 mb-2 border-b border-stone-200 dark:border-stone-800">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#8C651A] dark:text-[#CCA04F]">
+                    Direct Section Jump
+                  </span>
+                  <button onClick={() => setQuickJumpOpen(false)} className="text-xs font-bold text-stone-400 hover:text-stone-600">✕</button>
+                </div>
+                <div className="grid grid-cols-1 gap-1 text-xs">
+                  {[
+                    { id: 'advisory', label: '1. Niche Advisory Plans', sub: 'Flat, Villa, Office, Kundli' },
+                    { id: 'workflow', label: '2. Offline Delivery Model', sub: 'Coordinates to On-site' },
+                    { id: 'compass', label: '3. Vastu Compass Tool', sub: '16 Zones & Panchtatva' },
+                    { id: 'leadership', label: '4. Leadership Team', sub: 'Pathak, Tripathi, Nigam' },
+                    { id: 'academy', label: '5. Academy Masterclasses', sub: 'Professional Certification' },
+                    { id: 'reviews', label: '6. Verified Reviews', sub: 'Pan-India & International' },
+                    { id: 'faqs', label: '7. Frequently Asked Qs', sub: 'Non-demolition & Process' },
+                    { id: 'booking', label: '8. Book Consultation', sub: 'Intake Form & Ref ID' },
+                    { id: 'contact', label: '9. Contact & Bhopal HQ', sub: 'Phone, Email & Map' }
+                  ].map((sec) => (
+                    <button
+                      key={sec.id}
+                      onClick={() => {
+                        scrollToSection(sec.id);
+                        setQuickJumpOpen(false);
+                      }}
+                      className={`text-left p-2 rounded-xl transition hover:bg-[#FAF3DF] dark:hover:bg-stone-800 ${
+                        sec.id === 'booking' ? 'gold-gradient text-white font-bold' : ''
+                      }`}
+                    >
+                      <div className="font-bold text-xs">{sec.label}</div>
+                      <div className="text-[10px] opacity-75">{sec.sub}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Direct WhatsApp Pill */}
+            <a
+              href="https://wa.me/919009448601?text=Hello%20Vedic%20Wisdom,%20I%20am%20an%20international%20client%20and%20would%20like%20to%20consult%20with%20your%20research%20desk."
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider shadow-xl flex items-center space-x-2 transition border border-emerald-400"
+            >
+              <span className="text-sm">💬</span>
+              <span className="hidden sm:inline">WhatsApp Desk</span>
+            </a>
+          </div>
 
         </main>
 
