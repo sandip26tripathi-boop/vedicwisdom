@@ -1230,14 +1230,19 @@
                 <div className={`p-8 rounded-2xl border flex flex-col justify-between ${cardHighlight}`}>
                   <div>
                     <div className="flex items-center space-x-4 mb-6">
-                      <div className="w-14 h-14 rounded-full gold-gradient text-white flex items-center justify-center font-bold text-xl shadow">
-                        ST
+                      <div className="relative flex-shrink-0">
+                        <img
+                          src="images/sandeep_tripathi.jpg"
+                          alt="Sandeep K. Tripathi - Principal Researcher"
+                          className="w-20 h-20 rounded-full object-cover object-top border-2 border-[#CCA04F] shadow-lg ring-4 ring-amber-400/25 glow-gold"
+                        />
+                        <span className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-stone-900" title="Active Researcher"></span>
                       </div>
                       <div>
-                        <h4 className={`text-xl font-serif font-bold ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`}>SANDEEP TRIPATHI</h4>
+                        <h4 className={`text-xl font-serif font-bold ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`}>SANDEEP K. TRIPATHI</h4>
                         <p className={`text-xs uppercase tracking-widest font-semibold ${mutedText}`}>Principal Researcher & Educator</p>
-                        <span className="inline-block mt-1 px-2.5 py-0.5 rounded-full bg-[#B58934]/15 text-[#735010] dark:text-[#CCA04F] text-[10px] font-bold border border-[#B58934]/30">
-                          12+ Years Experience
+                        <span className="inline-block mt-1 px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-900 dark:text-amber-300 text-[10px] font-bold border border-amber-300 dark:border-amber-500/40">
+                          12+ Years Experience • Research Desk
                         </span>
                       </div>
                     </div>
