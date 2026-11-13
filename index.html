@@ -52,6 +52,8 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
       transition: background-color 0.3s ease, color 0.3s ease;
       overflow-x: hidden;
     }
@@ -592,26 +594,26 @@
         });
       };
 
-      // EYE-FRIENDLY LUXURY COLOR PALETTE (No harsh blinding pure white)
-      // Light Mode: Warm Cashmere Ivory (#F5F3EE), Silky Soft Pearl (#FAF8F4), Warm Velvet Charcoal (#1C1917 & #4A443C)
-      const bgMain = isDark ? "bg-[#0B0F19] text-[#FAF9F6]" : "bg-[#F5F3EE] text-[#1C1917]";
-      const bgAlt = isDark ? "bg-[#070A11]" : "bg-[#EBE7DD]";
-      const cardBg = isDark ? "bg-[#111827] border-[#B58934]/20 shadow-md" : "bg-[#FAF8F4] border-[#DDD7CA] soft-shadow";
+      // EYE-FRIENDLY WARM LIGHT YELLOW & CREAM LUXURY PALETTE
+      // Light Mode: Warm Sandalwood Cream (#FAF5E6 / #FBF7EC), Luminous Butter-Cream (#FFFDF7), Soft Golden Divider (#E2D7BA), Deep Warm Espresso Text (#26211A)
+      const bgMain = isDark ? "bg-[#0A0E17] text-[#FAF9F6]" : "bg-[#FAF5E6] text-[#26211A]";
+      const bgAlt = isDark ? "bg-[#060910]" : "bg-[#F3ECCE]";
+      const cardBg = isDark ? "bg-[#101624] border-[#B58934]/25 shadow-md" : "bg-[#FFFDF7] border-[#E2D7BA] shadow-sm";
       const cardHighlight = isDark 
-        ? "dark-gold-soft-gradient border-[#B58934]/40 shadow-xl" 
-        : "gold-soft-gradient border-[#B58934]/35 soft-shadow-lg";
-      const headerBg = isDark ? "bg-[#0B0F19]/90 border-[#B58934]/20" : "bg-[#F5F3EE]/95 border-[#DDD7CA] shadow-sm";
-      const headingText = isDark ? "text-white" : "text-[#1C1917]";
-      const bodyText = isDark ? "text-[#E2E8F0]" : "text-[#4A443C]";
-      const mutedText = isDark ? "text-[#94A3B8]" : "text-[#78716C]";
-      const borderSubtle = isDark ? "border-[#B58934]/20" : "border-[#DDD7CA]";
-      const inputBg = isDark ? "bg-[#070A11] border-[#B58934]/30 text-white" : "bg-[#F5F3EE] border-[#DDD7CA] text-[#1C1917]";
+        ? "bg-[#151D2E] border-[#CCA04F]/40 shadow-lg" 
+        : "bg-[#FFFDF0] border-[#CCA04F]/60 shadow-md";
+      const headerBg = isDark ? "bg-[#0A0E17]/95 border-[#B58934]/25" : "bg-[#FAF5E6]/95 border-[#E2D7BA] shadow-sm";
+      const borderSubtle = isDark ? "border-[#B58934]/25" : "border-[#E2D7BA]";
+      const headingText = isDark ? "text-white" : "text-[#26211A]";
+      const bodyText = isDark ? "text-[#DDD7CA]" : "text-[#3D352A]";
+      const mutedText = isDark ? "text-stone-400" : "text-[#5E5343]";
+      const inputBg = isDark ? "bg-[#060910] border-[#B58934]/35 text-white" : "bg-[#FAF5E6] border-[#E2D7BA] text-[#26211A]";
 
       return (
         <div className={`min-h-screen ${bgMain} selection:bg-[#B58934] selection:text-white transition-colors duration-300`}>
           
           {/* TOP ANNOUNCEMENT BAR */}
-          <div className={`${isDark ? 'bg-[#06080F] border-amber-500/20 text-stone-300' : 'bg-[#18181B] border-stone-800 text-stone-200'} border-b py-2 px-4 text-xs`}>
+          <div className={`${isDark ? 'bg-[#06080F] border-amber-500/20 text-stone-300' : 'bg-[#211C14] border-stone-800 text-stone-200'} border-b py-2 px-4 text-xs`}>
             <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center space-x-2.5">
                 <span className="flex h-2.5 w-2.5 relative">
@@ -660,7 +662,7 @@
               </div>
 
               {/* Desktop Nav Links */}
-              <nav className="hidden xl:flex items-center space-x-6 text-xs uppercase tracking-wider font-medium">
+              <nav className="hidden xl:flex items-center space-x-6 text-sm uppercase tracking-wider font-semibold">
                 <button onClick={() => scrollToSection('advisory')} className={`hover:text-[#946B1D] font-bold text-[#946B1D] dark:text-[#CCA04F] transition`}>Advisory Plans</button>
                 <button onClick={() => scrollToSection('workflow')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Offline Delivery</button>
                 <button onClick={() => scrollToSection('compass')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Vastu Compass</button>
@@ -804,13 +806,13 @@
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button
                     onClick={() => scrollToSection('advisory')}
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl gold-gradient text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:brightness-105 transition"
+                    className="w-full sm:w-auto px-8 py-4 rounded-xl gold-gradient text-white font-bold text-sm uppercase tracking-wider shadow-lg hover:brightness-105 transition"
                   >
                     Explore Niche Advisory Plans
                   </button>
                   <button
                     onClick={() => scrollToSection('workflow')}
-                    className={`w-full sm:w-auto px-8 py-3.5 rounded-xl border text-xs font-bold uppercase tracking-wider transition ${
+                    className={`w-full sm:w-auto px-8 py-4 rounded-xl border text-sm font-bold uppercase tracking-wider transition ${
                       isDark ? 'border-[#B58934]/60 text-[#CCA04F] hover:bg-[#111827]' : 'border-[#B58934]/50 text-[#735010] bg-[#FAF8F4] hover:bg-[#EBE7DD]'
                     }`}
                   >
@@ -820,7 +822,7 @@
                     href="https://wa.me/919009448601?text=Hello%20Vedic%20Wisdom,%20I%20would%20like%20to%20schedule%20an%20offline%20consultation/factory%20audit."
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-2 transition shadow-md"
+                    className="w-full sm:w-auto px-7 py-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-sm uppercase tracking-wider flex items-center justify-center space-x-2 transition shadow-md"
                   >
                     <span>💬</span>
                     <span>Direct WhatsApp Desk</span>
@@ -884,7 +886,7 @@
                       <h4 className={`text-xl font-serif font-bold mb-2 leading-snug ${headingText}`}>
                         {pkg.title}
                       </h4>
-                      <p className={`text-xs mb-4 leading-relaxed ${bodyText}`}>
+                      <p className={`text-sm mb-4 leading-relaxed ${bodyText}`}>
                         {pkg.desc}
                       </p>
 
@@ -910,10 +912,10 @@
 
                       {/* Included Deliverables */}
                       <div className="mb-6">
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
+                        <p className="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 mb-2.5">
                           Included Deliverables:
                         </p>
-                        <ul className={`text-xs space-y-2 ${mutedText}`}>
+                        <ul className={`text-sm space-y-2.5 ${mutedText}`}>
                           {pkg.deliverables.map((item, dIdx) => (
                             <li key={dIdx} className="flex items-start space-x-2">
                               <span className="text-[#946B1D] dark:text-[#CCA04F] font-bold mt-0.5">✓</span>
@@ -991,7 +993,7 @@
                       <h4 className={`text-xl font-serif font-bold mb-3 ${headingText}`}>
                         Digital Intake & Blueprint Submission
                       </h4>
-                      <p className={`text-xs leading-relaxed ${bodyText}`}>
+                      <p className={`text-sm leading-relaxed ${bodyText}`}>
                         Submit your birth coordinates or architectural CAD floorplans online. Our research desk registers your case dossier and conducts preliminary cuspal/zonal verification.
                       </p>
                     </div>
@@ -1067,7 +1069,7 @@
                     <h4 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-white">
                       Ready to Request an Offline Factory or Kundli Verification?
                     </h4>
-                    <p className={`text-xs md:text-sm leading-relaxed ${bodyText}`}>
+                    <p className={`text-sm md:text-base leading-relaxed ${bodyText}`}>
                       Directly connect with the Bhopal Research Desk on WhatsApp (+91 90094 48601) or schedule an engineer site visit.
                     </p>
                   </div>
