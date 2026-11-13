@@ -160,6 +160,29 @@
 const {
   useState
 } = React;
+const SOCIAL_MEDIA_CONFIG = {
+  instagram: {
+    handle: "@vedicwisdom.official",
+    url: "https://www.instagram.com/vedicwisdom.official",
+    label: "Instagram"
+  },
+  youtube: {
+    handle: "@VedicWisdomOfficial",
+    url: "https://www.youtube.com/@VedicWisdomOfficial",
+    label: "YouTube"
+  },
+  whatsapp: {
+    number: "+91 90094 48601",
+    url: "https://wa.me/919009448601",
+    label: "WhatsApp Desk"
+  },
+  email: {
+    address: "ask.vedicwisdom@gmail.com",
+    url: "mailto:ask.vedicwisdom@gmail.com",
+    label: "Advisory Email"
+  }
+};
+
 const MANDATORY_DISCLAIMER_EN = "Vedic Wisdom provides consultancy and educational guidance based on traditional Vastu Shastra, Astro-Vastu, KP Astrology and Vedic Astrology principles. These systems are rooted in traditional beliefs and classical interpretations. Our services are intended for informational, educational and personal guidance purposes. We do not guarantee any specific financial, professional, health, relationship or other outcome. Results may vary depending on individual circumstances. Our services are not a substitute for qualified legal, medical, financial, architectural or engineering advice.";
 const TESTIMONIAL_DISCLAIMER = "Individual client experiences are personal and do not represent guaranteed outcomes. (Sample client feedback shown with consent.)";
 const ACADEMY_COURSES = [{
@@ -636,10 +659,32 @@ function App() {
   }, /*#__PURE__*/React.createElement("span", {
     className: "hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-rose-950/80 text-rose-300 border border-rose-700/60"
   }, "\u25CF 0% Civil Demolition"), /*#__PURE__*/React.createElement("a", {
+    href: SOCIAL_MEDIA_CONFIG.instagram.url,
+    target: "_blank",
+    rel: "noreferrer",
+    className: "hover:text-pink-400 text-stone-300 font-semibold transition flex items-center space-x-1 px-1.5 py-0.5 rounded bg-pink-950/40 border border-pink-700/50 hover:border-pink-500",
+    title: "Follow Vedic Wisdom on Instagram"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-pink-400 text-[11px]"
+  }, "\uD83D\uDCF8"), /*#__PURE__*/React.createElement("span", {
+    className: "hidden md:inline"
+  }, "Instagram")), /*#__PURE__*/React.createElement("a", {
+    href: SOCIAL_MEDIA_CONFIG.youtube.url,
+    target: "_blank",
+    rel: "noreferrer",
+    className: "hover:text-red-400 text-stone-300 font-semibold transition flex items-center space-x-1 px-1.5 py-0.5 rounded bg-red-950/40 border border-red-700/50 hover:border-red-500",
+    title: "Subscribe to Vedic Wisdom on YouTube"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-red-500 text-[11px]"
+  }, "\u25B6"), /*#__PURE__*/React.createElement("span", {
+    className: "hidden md:inline"
+  }, "YouTube")), /*#__PURE__*/React.createElement("span", {
+    className: "text-stone-600 hidden sm:inline"
+  }, "|"), /*#__PURE__*/React.createElement("a", {
     href: "mailto:ask.vedicwisdom@gmail.com",
-    className: "hover:text-amber-300 transition text-stone-400 flex items-center space-x-1"
+    className: "hover:text-amber-300 transition text-stone-400 hidden lg:flex items-center space-x-1"
   }, /*#__PURE__*/React.createElement("span", null, "\u2709"), /*#__PURE__*/React.createElement("span", null, "ask.vedicwisdom@gmail.com")), /*#__PURE__*/React.createElement("span", {
-    className: "text-stone-600"
+    className: "text-stone-600 hidden lg:inline"
   }, "|"), /*#__PURE__*/React.createElement("a", {
     href: "https://wa.me/919009448601",
     target: "_blank",
@@ -2410,7 +2455,33 @@ function App() {
     target: "_blank",
     rel: "noreferrer",
     className: "text-xs text-[#946B1D] dark:text-[#CCA04F] hover:underline"
-  }, "+91 90094 48601")))), /*#__PURE__*/React.createElement("div", {
+  }, "+91 90094 48601"))), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-start space-x-3"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-pink-600 dark:text-pink-400 text-xl"
+  }, "\uD83D\uDCF8"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    className: `font-bold text-xs uppercase tracking-wider ${headingText}`
+  }, "Official Instagram Page"), /*#__PURE__*/React.createElement("a", {
+    href: SOCIAL_MEDIA_CONFIG.instagram.url,
+    target: "_blank",
+    rel: "noreferrer",
+    className: "text-xs text-pink-600 dark:text-pink-400 font-bold hover:underline flex items-center space-x-1 mt-0.5"
+  }, /*#__PURE__*/React.createElement("span", null, SOCIAL_MEDIA_CONFIG.instagram.handle), /*#__PURE__*/React.createElement("span", {
+    className: "text-[10px] text-stone-500"
+  }, "\u2197")))), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-start space-x-3"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-red-600 dark:text-red-400 text-xl"
+  }, "\u25B6"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    className: `font-bold text-xs uppercase tracking-wider ${headingText}`
+  }, "Official YouTube Channel"), /*#__PURE__*/React.createElement("a", {
+    href: SOCIAL_MEDIA_CONFIG.youtube.url,
+    target: "_blank",
+    rel: "noreferrer",
+    className: "text-xs text-red-600 dark:text-red-400 font-bold hover:underline flex items-center space-x-1 mt-0.5"
+  }, /*#__PURE__*/React.createElement("span", null, SOCIAL_MEDIA_CONFIG.youtube.handle), /*#__PURE__*/React.createElement("span", {
+    className: "text-[10px] text-stone-500"
+  }, "\u2197"))))), /*#__PURE__*/React.createElement("div", {
     className: `p-4 rounded-xl border text-xs ${cardBg} ${mutedText}`
   }, /*#__PURE__*/React.createElement("p", {
     className: `font-bold uppercase tracking-wider mb-1 ${headingText}`
@@ -2619,26 +2690,53 @@ function App() {
   }, MANDATORY_DISCLAIMER_EN)), /*#__PURE__*/React.createElement("div", {
     className: `flex flex-col md:flex-row items-center justify-between pt-6 border-t ${borderSubtle} gap-4 ${mutedText}`
   }, /*#__PURE__*/React.createElement("p", null, "\xA9 2026 VEDIC WISDOM. All Rights Reserved. International Vastu & Astro-Vastu Consultancy."), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-wrap space-x-6 text-xs"
+    className: "flex flex-col md:flex-row items-center justify-between w-full gap-6 pt-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center space-x-3"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-xs font-bold uppercase tracking-wider text-[#735010] dark:text-[#CCA04F]"
+  }, "Official Channels:"), /*#__PURE__*/React.createElement("a", {
+    href: SOCIAL_MEDIA_CONFIG.instagram.url,
+    target: "_blank",
+    rel: "noreferrer",
+    className: "inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-pink-100 text-pink-800 dark:bg-pink-950/80 dark:text-pink-300 border border-pink-300 dark:border-pink-800 hover:scale-105 transition"
+  }, /*#__PURE__*/React.createElement("span", null, "\uD83D\uDCF8"), /*#__PURE__*/React.createElement("span", null, "Instagram")), /*#__PURE__*/React.createElement("a", {
+    href: SOCIAL_MEDIA_CONFIG.youtube.url,
+    target: "_blank",
+    rel: "noreferrer",
+    className: "inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-800 dark:bg-red-950/80 dark:text-red-300 border border-red-300 dark:border-red-800 hover:scale-105 transition"
+  }, /*#__PURE__*/React.createElement("span", null, "\u25B6"), /*#__PURE__*/React.createElement("span", null, "YouTube")), /*#__PURE__*/React.createElement("a", {
+    href: SOCIAL_MEDIA_CONFIG.whatsapp.url,
+    target: "_blank",
+    rel: "noreferrer",
+    className: "inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 hover:scale-105 transition"
+  }, /*#__PURE__*/React.createElement("span", null, "\uD83D\uDCAC"), /*#__PURE__*/React.createElement("span", null, "WhatsApp"))), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-4 text-xs"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => scrollToSection('hero'),
     className: "hover:text-[#946B1D]"
   }, "Home"), /*#__PURE__*/React.createElement("button", {
-    onClick: () => scrollToSection('services'),
+    onClick: () => scrollToSection('advisory'),
     className: "hover:text-[#946B1D]"
-  }, "Services"), /*#__PURE__*/React.createElement("button", {
-    onClick: () => scrollToSection('pricing'),
+  }, "Advisory Plans"), /*#__PURE__*/React.createElement("button", {
+    onClick: () => scrollToSection('workflow'),
     className: "hover:text-[#946B1D]"
-  }, "Pricing (\u20B9 & $)"), /*#__PURE__*/React.createElement("button", {
+  }, "Offline Delivery"), /*#__PURE__*/React.createElement("button", {
     onClick: () => scrollToSection('compass'),
     className: "hover:text-[#946B1D]"
-  }, "Compass Tool"), /*#__PURE__*/React.createElement("button", {
+  }, "Vastu Compass"), /*#__PURE__*/React.createElement("button", {
+    onClick: () => scrollToSection('leadership'),
+    className: "hover:text-[#946B1D]"
+  }, "Leadership"), /*#__PURE__*/React.createElement("button", {
+    onClick: () => scrollToSection('academy'),
+    className: "hover:text-[#946B1D]"
+  }, "Academy"), /*#__PURE__*/React.createElement("button", {
     onClick: () => scrollToSection('faqs'),
     className: "hover:text-[#946B1D]"
   }, "FAQs"), /*#__PURE__*/React.createElement("button", {
     onClick: () => scrollToSection('contact'),
     className: "hover:text-[#946B1D]"
-  }, "Contact"))))));
+  }, "Contact")))))));
 }
 ReactDOM.createRoot(document.getElementById('root')).render( /*#__PURE__*/React.createElement(App, null));
 </script>
