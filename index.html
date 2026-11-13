@@ -47,7 +47,7 @@
   <!-- React 18 & Babel CDN -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 
   <style>
     /* Ultra-Crisp Sharp Typography Rendering */
@@ -786,15 +786,15 @@
     </radialGradient>
   </defs>
 
-  <!-- Padded boundaries: Entire artwork fits inside 1000x1000 with 50px safety margins -->
+  
 
-  <!-- Outer Protective Concentric Circles & Shastric Degree Rings -->
+  
   <circle cx="500" cy="500" r="440" stroke="#B58934" stroke-width="2.5" stroke-dasharray="10 6"/>
   <circle cx="500" cy="500" r="420" stroke="#CCA04F" stroke-width="1.8"/>
   <circle cx="500" cy="500" r="400" stroke="#B58934" stroke-width="1"/>
   <circle cx="500" cy="500" r="380" stroke="#CCA04F" stroke-width="0.8" stroke-dasharray="4 4"/>
 
-  <!-- 16 Directional Cardinal & Inter-cardinal Rays -->
+  
   <g stroke="#B58934" stroke-width="1" opacity="0.6">
     <line x1="500" y1="60" x2="500" y2="940"/>
     <line x1="60" y1="500" x2="940" y2="500"/>
@@ -802,12 +802,12 @@
     <line x1="811" y1="189" x2="189" y2="811" stroke-dasharray="6 4"/>
   </g>
 
-  <!-- Authentic 9x9 Vastu Mandala (81 Padas Grid) -->
+  
   <g stroke="#B58934" stroke-width="1.2" opacity="0.85">
-    <!-- Outer Square perimeter (450px wide, centered at 500,500: from 275 to 725) -->
+    
     <rect x="230" y="230" width="540" height="540" stroke="#8C651A" stroke-width="3" fill="none"/>
     
-    <!-- 9 Horizontal Grid Lines (each pad is 60px) -->
+    
     <line x1="230" y1="290" x2="770" y2="290"/>
     <line x1="230" y1="350" x2="770" y2="350"/>
     <line x1="230" y1="410" x2="770" y2="410"/>
@@ -817,7 +817,7 @@
     <line x1="230" y1="650" x2="770" y2="650"/>
     <line x1="230" y1="710" x2="770" y2="710"/>
 
-    <!-- 9 Vertical Grid Lines -->
+    
     <line x1="290" y1="230" x2="290" y2="770"/>
     <line x1="350" y1="230" x2="350" y2="770"/>
     <line x1="410" y1="230" x2="410" y2="770"/>
@@ -828,95 +828,95 @@
     <line x1="710" y1="230" x2="710" y2="770"/>
   </g>
 
-  <!-- Central Brahmasthan (3x3 Grid: 180x180 px centered at 500,500) -->
+  
   <rect x="410" y="410" width="180" height="180" fill="url(#mandalaCoreGlow)" stroke="#B58934" stroke-width="2.5"/>
   <circle cx="500" cy="500" r="90" stroke="#B58934" stroke-width="1.5" stroke-dasharray="5 5"/>
   <circle cx="500" cy="500" r="35" stroke="#CCA04F" stroke-width="2" fill="#B58934" fill-opacity="0.2"/>
   <circle cx="500" cy="500" r="8" fill="#8C651A"/>
   <text x="500" y="505" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="bold" letter-spacing="1">BRAHMASTHAN</text>
 
-  <!-- Diagonal Energy Axis (Brahma Sutra & Karna Sutra) -->
+  
   <line x1="230" y1="230" x2="770" y2="770" stroke="#8C651A" stroke-width="2"/>
   <line x1="770" y1="230" x2="230" y2="770" stroke="#8C651A" stroke-width="2"/>
 
-  <!-- Vastu Purusha Divine Silhouette (Head in Ishan/North-East, Feet in Nairutya/South-West) -->
+  
   <g stroke="#8C651A" stroke-width="2.2" opacity="0.9" fill="none">
-    <!-- Head in North-East (at coordinate 680, 320 in Shastric NE orientation) -->
-    <!-- Head Circle -->
+    
+    
     <circle cx="670" cy="330" r="38" stroke-width="2.5" fill="#CCA04F" fill-opacity="0.15"/>
-    <!-- Third Eye / Tilak -->
+    
     <circle cx="670" cy="330" r="4" fill="#B91C1C"/>
-    <!-- Shikha / Crown -->
+    
     <path d="M670 292 Q685 270 700 255 Q680 275 670 292" fill="#8C651A" fill-opacity="0.4"/>
     
-    <!-- Central Spinal Cord (Merudanda along SW-NE diagonal) -->
+    
     <path d="M640 360 Q570 430 500 500 Q430 570 360 640" stroke-width="3" stroke="#8C651A"/>
 
-    <!-- Folded Hands in Namaste at Chest (Brahmasthan margin) -->
+    
     <path d="M540 440 Q570 410 590 430 Q560 460 530 450" stroke-width="1.8"/>
     <path d="M470 390 Q500 360 520 380 Q490 410 460 400" stroke-width="1.8"/>
     <circle cx="550" cy="420" r="10" stroke-width="1.5" fill="#CCA04F" fill-opacity="0.2"/>
 
-    <!-- Outstretched Arms to NW (Vayu) and SE (Agni) -->
-    <!-- Left Arm towards Vayu (NW corner: 330, 330) -->
+    
+    
     <path d="M570 390 Q450 310 330 330" stroke-width="2"/>
-    <!-- Right Arm towards Agni (SE corner: 670, 670) -->
+    
     <path d="M610 430 Q690 550 670 670" stroke-width="2"/>
 
-    <!-- Outstretched Legs towards East & South, Folded at Knees -->
+    
     <path d="M450 550 Q350 490 310 570 Q370 630 430 590" stroke-width="2"/>
     <path d="M410 590 Q470 690 390 730 Q330 670 370 610" stroke-width="2"/>
 
-    <!-- Feet joined together in South-West (Nairutya corner: 330, 670) -->
+    
     <circle cx="340" cy="660" r="22" stroke-width="2" fill="#B58934" fill-opacity="0.25"/>
     <path d="M325 650 L355 670" stroke-width="2"/>
   </g>
 
-  <!-- Cardinal Direction Name Banners (Clean, Crisp Typography Inside Bounds) -->
-  <!-- NORTH (Top) -->
+  
+  
   <g>
     <rect x="420" y="55" width="160" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="500" y="74" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">NORTH (KUBERA)</text>
   </g>
 
-  <!-- SOUTH (Bottom) -->
+  
   <g>
     <rect x="420" y="915" width="160" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="500" y="934" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">SOUTH (YAMA)</text>
   </g>
 
-  <!-- EAST (Right) -->
+  
   <g>
     <rect x="825" y="485" width="150" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="900" y="504" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">EAST (INDRA)</text>
   </g>
 
-  <!-- WEST (Left) -->
+  
   <g>
     <rect x="25" y="485" width="150" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="100" y="504" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">WEST (VARUNA)</text>
   </g>
 
-  <!-- 4 Corner Zones -->
-  <!-- NE (Ishan) - Head -->
+  
+  
   <g>
     <rect x="740" y="150" width="130" height="26" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" opacity="0.95"/>
     <text x="805" y="167" text-anchor="middle" fill="#065F46" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">NE • ISHAN (HEAD)</text>
   </g>
 
-  <!-- SE (Agni) -->
+  
   <g>
     <rect x="740" y="820" width="130" height="26" rx="6" fill="#FFF7ED" stroke="#F97316" stroke-width="1.5" opacity="0.95"/>
     <text x="805" y="837" text-anchor="middle" fill="#9A3412" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">SE • AGNI (FIRE)</text>
   </g>
 
-  <!-- SW (Nairutya) - Feet -->
+  
   <g>
     <rect x="130" y="820" width="135" height="26" rx="6" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" opacity="0.95"/>
     <text x="197" y="837" text-anchor="middle" fill="#991B1B" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">SW • NAIRUTYA (FEET)</text>
   </g>
 
-  <!-- NW (Vayu) -->
+  
   <g>
     <rect x="130" y="150" width="130" height="26" rx="6" fill="#F0FDF4" stroke="#059669" stroke-width="1.5" opacity="0.95"/>
     <text x="195" y="167" text-anchor="middle" fill="#065F46" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">NW • VAYU (AIR)</text>
@@ -1496,15 +1496,15 @@
     </radialGradient>
   </defs>
 
-  <!-- Padded boundaries: Entire artwork fits inside 1000x1000 with 50px safety margins -->
+  
 
-  <!-- Outer Protective Concentric Circles & Shastric Degree Rings -->
+  
   <circle cx="500" cy="500" r="440" stroke="#B58934" stroke-width="2.5" stroke-dasharray="10 6"/>
   <circle cx="500" cy="500" r="420" stroke="#CCA04F" stroke-width="1.8"/>
   <circle cx="500" cy="500" r="400" stroke="#B58934" stroke-width="1"/>
   <circle cx="500" cy="500" r="380" stroke="#CCA04F" stroke-width="0.8" stroke-dasharray="4 4"/>
 
-  <!-- 16 Directional Cardinal & Inter-cardinal Rays -->
+  
   <g stroke="#B58934" stroke-width="1" opacity="0.6">
     <line x1="500" y1="60" x2="500" y2="940"/>
     <line x1="60" y1="500" x2="940" y2="500"/>
@@ -1512,12 +1512,12 @@
     <line x1="811" y1="189" x2="189" y2="811" stroke-dasharray="6 4"/>
   </g>
 
-  <!-- Authentic 9x9 Vastu Mandala (81 Padas Grid) -->
+  
   <g stroke="#B58934" stroke-width="1.2" opacity="0.85">
-    <!-- Outer Square perimeter (450px wide, centered at 500,500: from 275 to 725) -->
+    
     <rect x="230" y="230" width="540" height="540" stroke="#8C651A" stroke-width="3" fill="none"/>
     
-    <!-- 9 Horizontal Grid Lines (each pad is 60px) -->
+    
     <line x1="230" y1="290" x2="770" y2="290"/>
     <line x1="230" y1="350" x2="770" y2="350"/>
     <line x1="230" y1="410" x2="770" y2="410"/>
@@ -1527,7 +1527,7 @@
     <line x1="230" y1="650" x2="770" y2="650"/>
     <line x1="230" y1="710" x2="770" y2="710"/>
 
-    <!-- 9 Vertical Grid Lines -->
+    
     <line x1="290" y1="230" x2="290" y2="770"/>
     <line x1="350" y1="230" x2="350" y2="770"/>
     <line x1="410" y1="230" x2="410" y2="770"/>
@@ -1538,95 +1538,95 @@
     <line x1="710" y1="230" x2="710" y2="770"/>
   </g>
 
-  <!-- Central Brahmasthan (3x3 Grid: 180x180 px centered at 500,500) -->
+  
   <rect x="410" y="410" width="180" height="180" fill="url(#mandalaCoreGlow)" stroke="#B58934" stroke-width="2.5"/>
   <circle cx="500" cy="500" r="90" stroke="#B58934" stroke-width="1.5" stroke-dasharray="5 5"/>
   <circle cx="500" cy="500" r="35" stroke="#CCA04F" stroke-width="2" fill="#B58934" fill-opacity="0.2"/>
   <circle cx="500" cy="500" r="8" fill="#8C651A"/>
   <text x="500" y="505" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="bold" letter-spacing="1">BRAHMASTHAN</text>
 
-  <!-- Diagonal Energy Axis (Brahma Sutra & Karna Sutra) -->
+  
   <line x1="230" y1="230" x2="770" y2="770" stroke="#8C651A" stroke-width="2"/>
   <line x1="770" y1="230" x2="230" y2="770" stroke="#8C651A" stroke-width="2"/>
 
-  <!-- Vastu Purusha Divine Silhouette (Head in Ishan/North-East, Feet in Nairutya/South-West) -->
+  
   <g stroke="#8C651A" stroke-width="2.2" opacity="0.9" fill="none">
-    <!-- Head in North-East (at coordinate 680, 320 in Shastric NE orientation) -->
-    <!-- Head Circle -->
+    
+    
     <circle cx="670" cy="330" r="38" stroke-width="2.5" fill="#CCA04F" fill-opacity="0.15"/>
-    <!-- Third Eye / Tilak -->
+    
     <circle cx="670" cy="330" r="4" fill="#B91C1C"/>
-    <!-- Shikha / Crown -->
+    
     <path d="M670 292 Q685 270 700 255 Q680 275 670 292" fill="#8C651A" fill-opacity="0.4"/>
     
-    <!-- Central Spinal Cord (Merudanda along SW-NE diagonal) -->
+    
     <path d="M640 360 Q570 430 500 500 Q430 570 360 640" stroke-width="3" stroke="#8C651A"/>
 
-    <!-- Folded Hands in Namaste at Chest (Brahmasthan margin) -->
+    
     <path d="M540 440 Q570 410 590 430 Q560 460 530 450" stroke-width="1.8"/>
     <path d="M470 390 Q500 360 520 380 Q490 410 460 400" stroke-width="1.8"/>
     <circle cx="550" cy="420" r="10" stroke-width="1.5" fill="#CCA04F" fill-opacity="0.2"/>
 
-    <!-- Outstretched Arms to NW (Vayu) and SE (Agni) -->
-    <!-- Left Arm towards Vayu (NW corner: 330, 330) -->
+    
+    
     <path d="M570 390 Q450 310 330 330" stroke-width="2"/>
-    <!-- Right Arm towards Agni (SE corner: 670, 670) -->
+    
     <path d="M610 430 Q690 550 670 670" stroke-width="2"/>
 
-    <!-- Outstretched Legs towards East & South, Folded at Knees -->
+    
     <path d="M450 550 Q350 490 310 570 Q370 630 430 590" stroke-width="2"/>
     <path d="M410 590 Q470 690 390 730 Q330 670 370 610" stroke-width="2"/>
 
-    <!-- Feet joined together in South-West (Nairutya corner: 330, 670) -->
+    
     <circle cx="340" cy="660" r="22" stroke-width="2" fill="#B58934" fill-opacity="0.25"/>
     <path d="M325 650 L355 670" stroke-width="2"/>
   </g>
 
-  <!-- Cardinal Direction Name Banners (Clean, Crisp Typography Inside Bounds) -->
-  <!-- NORTH (Top) -->
+  
+  
   <g>
     <rect x="420" y="55" width="160" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="500" y="74" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">NORTH (KUBERA)</text>
   </g>
 
-  <!-- SOUTH (Bottom) -->
+  
   <g>
     <rect x="420" y="915" width="160" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="500" y="934" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">SOUTH (YAMA)</text>
   </g>
 
-  <!-- EAST (Right) -->
+  
   <g>
     <rect x="825" y="485" width="150" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="900" y="504" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">EAST (INDRA)</text>
   </g>
 
-  <!-- WEST (Left) -->
+  
   <g>
     <rect x="25" y="485" width="150" height="28" rx="6" fill="#FFFDF7" stroke="#B58934" stroke-width="1.5" opacity="0.95"/>
     <text x="100" y="504" text-anchor="middle" fill="#8C651A" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="bold" letter-spacing="2">WEST (VARUNA)</text>
   </g>
 
-  <!-- 4 Corner Zones -->
-  <!-- NE (Ishan) - Head -->
+  
+  
   <g>
     <rect x="740" y="150" width="130" height="26" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" opacity="0.95"/>
     <text x="805" y="167" text-anchor="middle" fill="#065F46" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">NE • ISHAN (HEAD)</text>
   </g>
 
-  <!-- SE (Agni) -->
+  
   <g>
     <rect x="740" y="820" width="130" height="26" rx="6" fill="#FFF7ED" stroke="#F97316" stroke-width="1.5" opacity="0.95"/>
     <text x="805" y="837" text-anchor="middle" fill="#9A3412" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">SE • AGNI (FIRE)</text>
   </g>
 
-  <!-- SW (Nairutya) - Feet -->
+  
   <g>
     <rect x="130" y="820" width="135" height="26" rx="6" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" opacity="0.95"/>
     <text x="197" y="837" text-anchor="middle" fill="#991B1B" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">SW • NAIRUTYA (FEET)</text>
   </g>
 
-  <!-- NW (Vayu) -->
+  
   <g>
     <rect x="130" y="150" width="130" height="26" rx="6" fill="#F0FDF4" stroke="#059669" stroke-width="1.5" opacity="0.95"/>
     <text x="195" y="167" text-anchor="middle" fill="#065F46" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="bold">NW • VAYU (AIR)</text>
