@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
   <title>Vedic Wisdom | International Vastu & Astro-Vastu Consultancy</title>
   <meta name="description" content="International Vastu & Astro-Vastu Consultancy for Residential, Commercial & Industrial Properties. Traditional Wisdom. Analytical Thinking. Practical Awareness." />
   
@@ -48,22 +48,43 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <style>
-    /* Ultra-Crisp Sharp Typography Rendering */
+    /* Ultra-Crisp Sharp Typography Rendering & Strict Mobile Viewport Full-Width Containment */
     html {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
-      font-size: 17px;
+      font-size: 16.5px;
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    @media (max-width: 640px) {
+      html {
+        font-size: 15.5px;
+      }
     }
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 17px;
+      font-size: 1rem;
       line-height: 1.65;
       font-weight: 450;
       letter-spacing: -0.01em;
       transition: background-color 0.3s ease, color 0.3s ease;
+      width: 100%;
+      max-width: 100vw;
       overflow-x: hidden;
+      margin: 0;
+      padding: 0;
       touch-action: manipulation;
+      position: relative;
+    }
+    #root {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      position: relative;
     }
     
     /* Vastu Purusha Sacred Geometric Watermark */
@@ -633,9 +654,9 @@ function App() {
   return /*#__PURE__*/React.createElement("div", {
     className: `min-h-screen ${bgMain} relative selection:bg-[#B58934] selection:text-white transition-colors duration-300 vastu-watermark-bg selection:bg-[#B58934] selection:text-white transition-colors duration-300`
   }, /*#__PURE__*/React.createElement("div", {
-    className: `${isDark ? 'bg-[#06080F] border-amber-500/20 text-stone-300' : 'bg-[#211C14] border-stone-800 text-stone-200'} border-b py-2 px-4 text-xs`
+    className: `${isDark ? 'bg-[#06080F] border-amber-500/20 text-stone-300' : 'bg-[#211C14] border-stone-800 text-stone-200'} border-b py-2 px-3 sm:px-4 text-xs w-full max-w-full overflow-hidden`
   }, /*#__PURE__*/React.createElement("div", {
-    className: "max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2"
+    className: "max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center space-x-2.5"
   }, /*#__PURE__*/React.createElement("span", {
@@ -704,7 +725,7 @@ function App() {
   }, "\u2726"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", {
     className: `font-serif font-bold text-xl tracking-wider leading-none ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`
   }, "VEDIC WISDOM"), /*#__PURE__*/React.createElement("p", {
-    className: `text-[10px] tracking-widest uppercase mt-0.5 ${mutedText}`
+    className: `text-[9px] sm:text-[10px] tracking-normal sm:tracking-widest uppercase mt-0.5 ${mutedText} truncate max-w-[200px] sm:max-w-none`
   }, "Traditional Wisdom. Analytical Thinking. Practical Awareness."))), /*#__PURE__*/React.createElement("nav", {
     className: "hidden xl:flex items-center space-x-6 text-sm uppercase tracking-wider font-semibold"
   }, /*#__PURE__*/React.createElement("button", {
@@ -1209,11 +1230,11 @@ function App() {
     "font-size": "11",
     "font-weight": "bold"
   }, "NW \u2022 VAYU (AIR)"))))), /*#__PURE__*/React.createElement("div", {
-    className: `sticky top-[69px] z-40 border-b py-2 px-3 backdrop-blur-md transition-all shadow-sm ${isDark ? 'bg-[#0E131F]/90 border-amber-500/20' : 'bg-[#F4EED8]/95 border-[#DFD4B5]'}`
+    className: `sticky top-[61px] sm:top-[69px] z-40 border-b py-1.5 sm:py-2 px-2 sm:px-3 backdrop-blur-md transition-all shadow-sm w-full max-w-full overflow-hidden ${isDark ? 'bg-[#0E131F]/90 border-amber-500/20' : 'bg-[#F4EED8]/95 border-[#DFD4B5]'}`
   }, /*#__PURE__*/React.createElement("div", {
-    className: "max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto no-scrollbar py-0.5 text-xs"
+    className: "max-w-7xl mx-auto flex items-center justify-between gap-2 w-full min-w-0"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center space-x-1 flex-nowrap shrink-0"
+    className: "flex items-center space-x-1.5 flex-nowrap overflow-x-auto no-scrollbar py-1 w-full min-w-0"
   }, /*#__PURE__*/React.createElement("span", {
     className: "font-bold text-[#8C651A] dark:text-[#CCA04F] uppercase tracking-wider text-[11px] mr-1 flex items-center"
   }, /*#__PURE__*/React.createElement("span", null, "\u26A1 Quick Jump:")), [{
@@ -2601,7 +2622,7 @@ function App() {
     },
     className: "w-1/2 sm:w-auto px-6 py-2.5 rounded-xl gold-gradient text-white font-bold text-xs uppercase tracking-wider hover:brightness-105 transition shadow-sm"
   }, "Book This Audit"))))), /*#__PURE__*/React.createElement("div", {
-    className: "fixed bottom-5 right-5 z-50 flex flex-col items-end space-y-2.5"
+    className: "fixed bottom-3 right-3 sm:bottom-5 sm:right-5 z-50 flex flex-col items-end space-y-2"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => setQuickJumpOpen(!quickJumpOpen),
     className: "px-4 py-3 rounded-full gold-gradient text-white font-bold text-xs uppercase tracking-wider shadow-2xl flex items-center space-x-2 hover:scale-105 transition border-2 border-amber-300 floating-nav-pulse",
@@ -2690,9 +2711,9 @@ function App() {
   }, MANDATORY_DISCLAIMER_EN)), /*#__PURE__*/React.createElement("div", {
     className: `flex flex-col md:flex-row items-center justify-between pt-6 border-t ${borderSubtle} gap-4 ${mutedText}`
   }, /*#__PURE__*/React.createElement("p", null, "\xA9 2026 VEDIC WISDOM. All Rights Reserved. International Vastu & Astro-Vastu Consultancy."), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col md:flex-row items-center justify-between w-full gap-6 pt-4"
+    className: "flex flex-col md:flex-row items-center justify-between w-full gap-6 pt-4 text-center md:text-left"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center space-x-3"
+    className: "flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-xs"
   }, /*#__PURE__*/React.createElement("span", {
     className: "text-xs font-bold uppercase tracking-wider text-[#735010] dark:text-[#CCA04F]"
   }, "Official Channels:"), /*#__PURE__*/React.createElement("a", {
@@ -2711,7 +2732,7 @@ function App() {
     rel: "noreferrer",
     className: "inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 hover:scale-105 transition"
   }, /*#__PURE__*/React.createElement("span", null, "\uD83D\uDCAC"), /*#__PURE__*/React.createElement("span", null, "WhatsApp"))), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-wrap gap-4 text-xs"
+    className: "flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 text-xs"
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => scrollToSection('hero'),
     className: "hover:text-[#946B1D]"
