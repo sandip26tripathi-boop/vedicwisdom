@@ -89,125 +89,6 @@
 
     const TESTIMONIAL_DISCLAIMER = "Individual client experiences are personal and do not represent guaranteed outcomes. (Sample client feedback shown with consent.)";
 
-    // EXACT DUAL PRICING (BOTH ₹ INR AND $ USD) FROM thevedicwisdom.vercel.app
-    const CONSULTATION_PACKAGES = [
-      {
-        id: "astrology_personal",
-        title: "Classical Vedic & KP Astrology Consultation",
-        category: "Astrology Advisory",
-        duration: "45-Minute Live Video Session + Recording",
-        priceInr: "₹2,499",
-        priceUsd: "$49",
-        originalInr: "₹4,000",
-        originalUsd: "$79",
-        discount: "38% OFF",
-        tag: "Most Popular",
-        features: [
-          "Complete Birth Chart (Kundli) & Dasha Analysis",
-          "KP Cuspal Interlink & Exact Event Timing",
-          "Career, Wealth, Marriage & Health Roadmap",
-          "Targeted Shastric & Gemstone Guidance",
-          "Audio & Video Recording Provided"
-        ]
-      },
-      {
-        id: "varshphal_report",
-        title: "Yearly Varshphal & KP Transit Report",
-        category: "Digital Annual Dossier",
-        duration: "Digital PDF (38–45 Pages)",
-        priceInr: "₹999",
-        priceUsd: "$19",
-        originalInr: "₹2,000",
-        originalUsd: "$39",
-        discount: "50% OFF",
-        tag: "High Value",
-        features: [
-          "Month-by-Month Predictive Cashflow & Growth",
-          "Key Dates for Saturn, Rahu & Jupiter Triggers",
-          "Muntha Lord Position & Annual Ruler Strength",
-          "Actionable Non-Demolition Remedial Blueprint",
-          "Delivery Within 24-48 Business Hours"
-        ]
-      },
-      {
-        id: "business_blueprint",
-        title: "Business, Wealth & Career Blueprint",
-        category: "Enterprise Advisory",
-        duration: "Comprehensive Dossier (50+ Pages)",
-        priceInr: "₹1,499",
-        priceUsd: "$29",
-        originalInr: "₹3,000",
-        originalUsd: "$59",
-        discount: "50% OFF",
-        tag: "Executive",
-        features: [
-          "KP Analysis of 2nd, 6th, 10th & 11th Wealth Houses",
-          "5-Year Commercial Trajectory & Expansion Windows",
-          "Partnership Compatibility & Key Signing Dates",
-          "Brand Name & Corporate Numerology Alignment",
-          "Priority Follow-up Email Assistance"
-        ]
-      },
-      {
-        id: "residential_vastu",
-        title: "Residential Vastu & Astro-Vastu Audit",
-        category: "Home & Villa Architecture",
-        duration: "Full CAD Analysis + Zoom Call",
-        priceInr: "₹7,999",
-        priceUsd: "$119",
-        originalInr: "₹12,000",
-        originalUsd: "$169",
-        discount: "34% OFF",
-        tag: "Homeowners",
-        features: [
-          "16 Cardinal Direction Zones CAD Evaluation",
-          "Main Entrance Cardinal Degree Verification",
-          "0% Demolition Remedies (Metals, Colors, Crystals)",
-          "Synchronized with Primary Earner's Birth Chart",
-          "Detailed Executive PDF Remedial Plan"
-        ]
-      },
-      {
-        id: "commercial_vastu",
-        title: "Commercial Office & Corporate Vastu Audit",
-        category: "Workplace & Retail",
-        duration: "Architectural Layout Audit",
-        priceInr: "₹12,999",
-        priceUsd: "$189",
-        originalInr: "₹18,000",
-        originalUsd: "$249",
-        discount: "28% OFF",
-        tag: "Business Growth",
-        features: [
-          "MD Cabin, Boardroom & Team Seating Alignment",
-          "Accounts Desk, Cash Counter & Safe Realignment",
-          "Server Room & Heavy Tech Orientation",
-          "Client Inflow & Operational Efficiency Audit",
-          "Turnkey Implementation Strategy"
-        ]
-      },
-      {
-        id: "industrial_vastu",
-        title: "Industrial & Factory Comprehensive Vastu Audit",
-        category: "Manufacturing & Heavy Industry",
-        duration: "Industrial Plant Layout Review",
-        priceInr: "₹24,999",
-        priceUsd: "$349",
-        originalInr: "₹35,000",
-        originalUsd: "$499",
-        discount: "29% OFF",
-        tag: "Flagship Corporate",
-        features: [
-          "Heavy Plant Machinery, Boilers & Furnace Alignment",
-          "Raw Material vs Finished Inventory Logistics Flow",
-          "High-Voltage Substation, DG Set & Water Sump Placing",
-          "Labour Stability & Operational Downtime Mitigation",
-          "Zero Production Downtime Remedial Execution"
-        ]
-      }
-    ];
-
-    // ACADEMY COURSES WITH DUAL PRICING (₹ INR & $ USD)
     const ACADEMY_COURSES = [
       {
         id: "ac_1",
@@ -434,7 +315,7 @@
 
       const [selectedZone, setSelectedZone] = useState(VASTU_ZONES[0]);
       const [activeFaq, setActiveFaq] = useState(0);
-      const [selectedService, setSelectedService] = useState('Industrial & Factory Comprehensive Vastu Audit (₹24,999 / $349)');
+      const [selectedService, setSelectedService] = useState('Industrial & Factory Comprehensive Vastu Audit');
       const [preferredCurrency, setPreferredCurrency] = useState('INR & USD');
       const [bookingSuccess, setBookingSuccess] = useState(null);
       const [contactSuccess, setContactSuccess] = useState(null);
@@ -444,11 +325,6 @@
         setMobileMenuOpen(false);
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
-      };
-
-      const handleSelectPackage = (pkgTitle, inrPrice, usdPrice) => {
-        setSelectedService(`${pkgTitle} (${inrPrice} / ${usdPrice})`);
-        scrollToSection('booking');
       };
 
       const handleBookingSubmit = (e) => {
@@ -535,31 +411,18 @@
 
               {/* Desktop Nav Links */}
               <nav className="hidden xl:flex items-center space-x-6 text-xs uppercase tracking-wider font-medium">
-                <button onClick={() => scrollToSection('services')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Services</button>
-                <button onClick={() => scrollToSection('pricing')} className="text-[#946B1D] dark:text-[#CCA04F] font-bold hover:underline transition">
-                  Pricing (₹ & $)
-                </button>
-                <button onClick={() => scrollToSection('industrial')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Industrial Vastu</button>
-                <button onClick={() => scrollToSection('astro-vastu')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Astro-Vastu</button>
-                <button onClick={() => scrollToSection('kp-astrology')} className={`hover:text-[#946B1D] transition ${bodyText}`}>KP Astrology</button>
-                <button onClick={() => scrollToSection('compass')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Compass Tool</button>
+                <button onClick={() => scrollToSection('compass')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Vastu Compass</button>
                 <button onClick={() => scrollToSection('leadership')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Leadership</button>
                 <button onClick={() => scrollToSection('academy')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Academy</button>
                 <button onClick={() => scrollToSection('reviews')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Reviews</button>
                 <button onClick={() => scrollToSection('faqs')} className={`hover:text-[#946B1D] transition ${bodyText}`}>FAQs</button>
+                <button onClick={() => scrollToSection('contact')} className={`hover:text-[#946B1D] transition ${bodyText}`}>Contact</button>
               </nav>
 
               {/* Right Controls: Day/Night Switcher + Dual Currency Tag + Booking CTA */}
               <div className="flex items-center space-x-3">
                 
-                {/* Dual Currency Badge */}
-                <div className={`hidden md:inline-flex items-center px-2.5 py-1 rounded-lg border text-xs font-semibold ${
-                  isDark ? 'bg-[#111827] border-[#B58934]/30 text-[#CCA04F]' : 'bg-[#EBE7DD] border-[#DDD7CA] text-[#735010]'
-                }`}>
-                  <span className="font-bold">₹ INR</span>
-                  <span className="mx-1 text-stone-400">/</span>
-                  <span className="font-bold">$ USD</span>
-                </div>
+                
 
                 {/* DAY / NIGHT MODE SWITCHER */}
                 <button
@@ -596,16 +459,12 @@
             {/* Mobile Navigation Drawer */}
             {mobileMenuOpen && (
               <div className={`xl:hidden mt-3 pt-3 border-t ${borderSubtle} flex flex-col space-y-2 text-sm`}>
-                <button onClick={() => scrollToSection('services')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Services</button>
-                <button onClick={() => scrollToSection('pricing')} className="text-left py-1 text-[#946B1D] dark:text-[#CCA04F] font-bold">Pricing & Plans (₹ & $)</button>
-                <button onClick={() => scrollToSection('industrial')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Industrial & Factory Vastu</button>
-                <button onClick={() => scrollToSection('astro-vastu')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Astro-Vastu Synergy</button>
-                <button onClick={() => scrollToSection('kp-astrology')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>KP Astrology Analysis</button>
                 <button onClick={() => scrollToSection('compass')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Interactive Vastu Compass</button>
                 <button onClick={() => scrollToSection('leadership')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Leadership & Advisory</button>
                 <button onClick={() => scrollToSection('academy')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Vedic Wisdom Academy</button>
                 <button onClick={() => scrollToSection('reviews')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Client Reviews</button>
                 <button onClick={() => scrollToSection('faqs')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>FAQs</button>
+                <button onClick={() => scrollToSection('contact')} className={`text-left py-1 hover:text-[#946B1D] ${bodyText}`}>Contact Us</button>
                 <button onClick={() => scrollToSection('booking')} className="w-full py-2.5 mt-2 rounded-lg gold-gradient text-white font-bold text-xs uppercase tracking-wider">
                   Book Consultation
                 </button>
@@ -681,18 +540,18 @@
                 {/* CTA Action Buttons */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button
-                    onClick={() => scrollToSection('pricing')}
+                    onClick={() => scrollToSection('booking')}
                     className="w-full sm:w-auto px-8 py-3.5 rounded-xl gold-gradient text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:brightness-105 transition"
                   >
-                    View Pricing (₹ INR & $ USD)
+                    Book Consultation Audit
                   </button>
                   <button
-                    onClick={() => scrollToSection('services')}
+                    onClick={() => scrollToSection('compass')}
                     className={`w-full sm:w-auto px-8 py-3.5 rounded-xl border text-xs font-bold uppercase tracking-wider transition ${
                       isDark ? 'border-[#B58934]/60 text-[#CCA04F] hover:bg-[#111827]' : 'border-[#B58934]/50 text-[#735010] bg-[#FAF8F4] hover:bg-[#EBE7DD]'
                     }`}
                   >
-                    Explore Consultancy Services
+                    Interactive Vastu Compass
                   </button>
                   <a
                     href="https://wa.me/919009448601"
@@ -720,321 +579,11 @@
                     <p className={`text-xs uppercase tracking-wider mt-0.5 ${mutedText}`}>Non-Demolition Remedies</p>
                   </div>
                   <div>
-                    <p className={`text-2xl md:text-3xl font-serif font-bold ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`}>Dual Rates</p>
-                    <p className={`text-xs uppercase tracking-wider mt-0.5 ${mutedText}`}>₹ INR & $ USD Standard</p>
+                    <p className={`text-2xl md:text-3xl font-serif font-bold ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`}>Global Scope</p>
+                    <p className={`text-xs uppercase tracking-wider mt-0.5 ${mutedText}`}>Online & On-Site Audits</p>
                   </div>
                 </div>
 
-              </div>
-            </section>
-
-            {/* 2. SERVICES SECTION */}
-            <section id="services" className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
-              <div className="text-center max-w-3xl mx-auto mb-14">
-                <span className="text-[#946B1D] dark:text-[#CCA04F] text-xs uppercase font-bold tracking-widest">Architectural & Shastric Scope</span>
-                <h3 className={`text-3xl md:text-4xl font-serif font-bold mt-1 mb-3 ${headingText}`}>
-                  Comprehensive Consultancy Services
-                </h3>
-                <p className={`text-sm ${mutedText}`}>
-                  Engineered for residences, commercial enterprises, manufacturing complexes, and individual life alignment.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                {/* 1. Industrial & Factory Vastu */}
-                <div id="industrial" className={`rounded-2xl p-6 border relative flex flex-col justify-between transition hover:border-[#B58934] ${cardHighlight}`}>
-                  <div className="absolute top-0 right-0 gold-gradient text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
-                    Flagship Specialisation
-                  </div>
-                  <div>
-                    <span className="text-3xl">🏭</span>
-                    <h4 className={`text-xl font-serif font-bold mt-4 mb-1 ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`}>
-                      Industrial & Factory Vastu
-                    </h4>
-                    <p className={`text-xs italic mb-2 ${isDark ? 'text-[#CCA04F]/80' : 'text-[#735010]'}`}>
-                      Strategic Planning for Manufacturing Plants & Facilities
-                    </p>
-                    <p className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] mb-4">
-                      Fee: ₹24,999 / $349 USD <span className="line-through text-stone-400 font-normal">₹35,000 / $499</span>
-                    </p>
-                    <p className={`text-xs mb-5 leading-relaxed ${bodyText}`}>
-                      Custom layout planning for production machinery, raw materials, heavy boilers, transformers, dispatch yards, and executive blocks with zero downtime.
-                    </p>
-                    <ul className={`text-xs space-y-2 mb-6 ${mutedText}`}>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Heavy Plant & Furnace Alignment</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Raw Material vs Finished Dispatch Flow</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>High-Voltage Substation & Water Sump</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Phased Zero-Disruption Execution</span></li>
-                    </ul>
-                  </div>
-                  <button
-                    onClick={() => handleSelectPackage('Industrial & Factory Comprehensive Vastu Audit', '₹24,999', '$349')}
-                    className="w-full py-2.5 rounded-xl gold-gradient text-white font-bold text-xs uppercase tracking-wider hover:brightness-105 transition"
-                  >
-                    Book Industrial Audit (₹24,999 / $349)
-                  </button>
-                </div>
-
-                {/* 2. Vastu Without Demolition */}
-                <div className={`rounded-2xl p-6 border flex flex-col justify-between transition hover:border-[#B58934] ${cardBg}`}>
-                  <div>
-                    <span className="text-3xl">🔨</span>
-                    <h4 className={`text-xl font-serif font-bold mt-4 mb-1 ${headingText}`}>
-                      Vastu Without Demolition
-                    </h4>
-                    <p className={`text-xs italic mb-2 ${isDark ? 'text-[#CCA04F]/80' : 'text-[#735010]'}`}>
-                      Practical Non-Structural Energy Realignment
-                    </p>
-                    <p className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] mb-4">
-                      Fee: ₹7,999 / $119 USD <span className="line-through text-stone-400 font-normal">₹12,000 / $169</span>
-                    </p>
-                    <p className={`text-xs mb-5 leading-relaxed ${bodyText}`}>
-                      Optimizing established built environments through directional elemental therapies, metallic strips (brass, copper, zinc), color balancing, and furniture positioning.
-                    </p>
-                    <ul className={`text-xs space-y-2 mb-6 ${mutedText}`}>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Zero Wall Demolition Required</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>16-Zone Panchtatva Elemental Tuning</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Ergonomic Desk & Bed Realignment</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Feasible & Cost-Effective Interventions</span></li>
-                    </ul>
-                  </div>
-                  <button
-                    onClick={() => handleSelectPackage('Residential Vastu & Astro-Vastu Audit', '₹7,999', '$119')}
-                    className={`w-full py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider transition ${
-                      isDark ? 'border-[#B58934]/50 text-[#CCA04F] hover:bg-[#111827]' : 'border-[#B58934]/40 text-[#735010] bg-[#FAF8F4] hover:bg-[#EBE7DD]'
-                    }`}
-                  >
-                    Explore Non-Demolition (₹7,999 / $119)
-                  </button>
-                </div>
-
-                {/* 3. Residential Vastu */}
-                <div className={`rounded-2xl p-6 border flex flex-col justify-between transition hover:border-[#B58934] ${cardBg}`}>
-                  <div>
-                    <span className="text-3xl">🏡</span>
-                    <h4 className={`text-xl font-serif font-bold mt-4 mb-1 ${headingText}`}>
-                      Residential Vastu Consultancy
-                    </h4>
-                    <p className={`text-xs italic mb-2 ${isDark ? 'text-[#CCA04F]/80' : 'text-[#735010]'}`}>
-                      Harmonious Living for Apartments, Villas & Houses
-                    </p>
-                    <p className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] mb-4">
-                      Fee: ₹7,999 / $119 USD <span className="line-through text-stone-400 font-normal">₹12,000 / $169</span>
-                    </p>
-                    <p className={`text-xs mb-5 leading-relaxed ${bodyText}`}>
-                      Directional evaluation of residential blueprints, main entrance cardinal degrees, kitchen fire alignment, master bedroom placement, and family living spaces.
-                    </p>
-                    <ul className={`text-xs space-y-2 mb-6 ${mutedText}`}>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Main Entrance 32-Pada Evaluation</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Kitchen & Water Sump Coordination</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Deep Restful Sleep Zone Alignment</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Pre-Purchase Flat Evaluation</span></li>
-                    </ul>
-                  </div>
-                  <button
-                    onClick={() => handleSelectPackage('Residential Vastu & Astro-Vastu Audit', '₹7,999', '$119')}
-                    className={`w-full py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider transition ${
-                      isDark ? 'border-[#B58934]/50 text-[#CCA04F] hover:bg-[#111827]' : 'border-[#B58934]/40 text-[#735010] bg-[#FAF8F4] hover:bg-[#EBE7DD]'
-                    }`}
-                  >
-                    Book Residential Vastu (₹7,999 / $119)
-                  </button>
-                </div>
-
-                {/* 4. Commercial & Corporate Vastu */}
-                <div className={`rounded-2xl p-6 border flex flex-col justify-between transition hover:border-[#B58934] ${cardBg}`}>
-                  <div>
-                    <span className="text-3xl">🏢</span>
-                    <h4 className={`text-xl font-serif font-bold mt-4 mb-1 ${headingText}`}>
-                      Commercial & Corporate Vastu
-                    </h4>
-                    <p className={`text-xs italic mb-2 ${isDark ? 'text-[#CCA04F]/80' : 'text-[#735010]'}`}>
-                      Enhanced Productivity for Offices & Retail
-                    </p>
-                    <p className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] mb-4">
-                      Fee: ₹12,999 / $189 USD <span className="line-through text-stone-400 font-normal">₹18,000 / $249</span>
-                    </p>
-                    <p className={`text-xs mb-5 leading-relaxed ${bodyText}`}>
-                      Optimizing corporate offices, retail stores, showrooms, and corporate campuses for employee collaboration, executive clarity, and cashflow security.
-                    </p>
-                    <ul className={`text-xs space-y-2 mb-6 ${mutedText}`}>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>CEO & Boardroom Orientation</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Accounts, Finance Desk & Safe Placement</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>IT Server Room & Infrastructure</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Customer Retention Footfall Layout</span></li>
-                    </ul>
-                  </div>
-                  <button
-                    onClick={() => handleSelectPackage('Commercial Office & Corporate Vastu Audit', '₹12,999', '$189')}
-                    className={`w-full py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider transition ${
-                      isDark ? 'border-[#B58934]/50 text-[#CCA04F] hover:bg-[#111827]' : 'border-[#B58934]/40 text-[#735010] bg-[#FAF8F4] hover:bg-[#EBE7DD]'
-                    }`}
-                  >
-                    Book Commercial Vastu (₹12,999 / $189)
-                  </button>
-                </div>
-
-                {/* 5. Astro-Vastu Synergy */}
-                <div id="astro-vastu" className={`rounded-2xl p-6 border flex flex-col justify-between transition hover:border-[#B58934] ${cardHighlight}`}>
-                  <div>
-                    <span className="text-3xl">✨</span>
-                    <h4 className={`text-xl font-serif font-bold mt-4 mb-1 ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`}>
-                      Astro-Vastu Synergy
-                    </h4>
-                    <p className={`text-xs italic mb-2 ${isDark ? 'text-[#CCA04F]/80' : 'text-[#735010]'}`}>
-                      Synchronizing Horoscope Planetary Dashas with 16 Spatial Zones
-                    </p>
-                    <p className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] mb-4">
-                      Fee: ₹7,999 / $119 USD <span className="line-through text-stone-400 font-normal">₹12,000 / $169</span>
-                    </p>
-                    <p className={`text-xs mb-5 leading-relaxed ${bodyText}`}>
-                      Aligning the individual planetary significators and current dasha periods of key occupants directly with the directional zones of their living or working space.
-                    </p>
-                    <ul className={`text-xs space-y-2 mb-6 ${mutedText}`}>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Birth Chart Planetary Mapping to Space</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Career & Financial Timing Synchronization</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Tailored Personal Non-Demolition Cures</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Dynamic Dasha Transit Adjustments</span></li>
-                    </ul>
-                  </div>
-                  <button
-                    onClick={() => handleSelectPackage('Residential Vastu & Astro-Vastu Audit', '₹7,999', '$119')}
-                    className="w-full py-2.5 rounded-xl gold-gradient text-white font-bold text-xs uppercase tracking-wider hover:brightness-105 transition"
-                  >
-                    Book Astro-Vastu (₹7,999 / $119)
-                  </button>
-                </div>
-
-                {/* 6. KP Astrology & Cuspal Interlink */}
-                <div id="kp-astrology" className={`rounded-2xl p-6 border flex flex-col justify-between transition hover:border-[#B58934] ${cardBg}`}>
-                  <div>
-                    <span className="text-3xl">🔮</span>
-                    <h4 className={`text-xl font-serif font-bold mt-4 mb-1 ${headingText}`}>
-                      KP Astrology & Cuspal Interlink
-                    </h4>
-                    <p className={`text-xs italic mb-2 ${isDark ? 'text-[#CCA04F]/80' : 'text-[#735010]'}`}>
-                      Krishnamurti Paddhati, Placidus Cusps & Star-Lords
-                    </p>
-                    <p className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] mb-4">
-                      Fee: ₹2,499 / $49 USD <span className="line-through text-stone-400 font-normal">₹4,000 / $79</span>
-                    </p>
-                    <p className={`text-xs mb-5 leading-relaxed ${bodyText}`}>
-                      Mathematical astrological precision analyzing the Cusp Sub-Lords to predict life milestones, career transitions, and wealth timing with logical clarity.
-                    </p>
-                    <ul className={`text-xs space-y-2 mb-6 ${mutedText}`}>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Precise Cusp Sub-Lord Analytics</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Objective Event Timing Verification</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Business, Partnerships & Career Clarity</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-[#946B1D] dark:text-[#CCA04F] font-bold">✓</span><span>Completely Free from Fatalistic Fear</span></li>
-                    </ul>
-                  </div>
-                  <button
-                    onClick={() => handleSelectPackage('Classical Vedic & KP Astrology Consultation', '₹2,499', '$49')}
-                    className={`w-full py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider transition ${
-                      isDark ? 'border-[#B58934]/50 text-[#CCA04F] hover:bg-[#111827]' : 'border-[#B58934]/40 text-[#735010] bg-[#FAF8F4] hover:bg-[#EBE7DD]'
-                    }`}
-                  >
-                    Book KP Astrology (₹2,499 / $49)
-                  </button>
-                </div>
-
-              </div>
-            </section>
-
-            {/* 3. TRANSPARENT PRICING & PACKAGES SECTION (EYE-FRIENDLY WARM STYLING) */}
-            <section id="pricing" className={`py-20 px-4 md:px-8 border-y ${borderSubtle} ${bgAlt}`}>
-              <div className="max-w-7xl mx-auto">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                  <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full border border-[#B58934]/35 bg-[#FAF8F4] text-[#735010] dark:text-[#CCA04F] text-xs font-bold mb-3 uppercase tracking-wider soft-shadow">
-                    <span>₹ INR (India) & $ USD (Global) Dual Pricing</span>
-                  </div>
-                  <h3 className={`text-3xl md:text-5xl font-serif font-bold mt-1 mb-3 ${headingText}`}>
-                    Consultation Pricing & Reports
-                  </h3>
-                  <p className={`text-sm mb-4 ${mutedText}`}>
-                    All service packages are presented simultaneously in both <strong>Indian Rupees (₹)</strong> and <strong>US Dollars ($)</strong>. Zero hidden costs.
-                  </p>
-                </div>
-
-                {/* 6 Pricing Cards Grid with Dual Pricing */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {CONSULTATION_PACKAGES.map((pkg) => (
-                    <div
-                      key={pkg.id}
-                      className={`rounded-2xl p-6 border flex flex-col justify-between transition relative ${
-                        pkg.tag === 'Most Popular' || pkg.tag === 'Flagship Corporate'
-                          ? cardHighlight
-                          : cardBg
-                      }`}
-                    >
-                      {pkg.tag && (
-                        <div className="absolute top-0 right-0 gold-gradient text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
-                          {pkg.tag}
-                        </div>
-                      )}
-
-                      <div>
-                        <span className="text-xs font-bold text-[#946B1D] dark:text-[#CCA04F] uppercase tracking-widest block mb-1">
-                          {pkg.category}
-                        </span>
-                        <h4 className={`text-xl font-serif font-bold mb-2 leading-snug ${headingText}`}>
-                          {pkg.title}
-                        </h4>
-                        <p className={`text-xs mb-4 ${mutedText}`}>{pkg.duration}</p>
-
-                        {/* Dual Price Box (Both Rupee and Dollar displayed prominently) */}
-                        <div className={`p-4 rounded-xl mb-6 border ${borderSubtle} ${isDark ? 'bg-[#070A11]' : 'bg-[#F2EFE8]'}`}>
-                          <div className="flex items-baseline justify-between">
-                            <div>
-                              <span className={`text-2xl sm:text-3xl font-serif font-bold ${isDark ? 'text-[#CCA04F]' : 'text-[#735010]'}`}>
-                                {pkg.priceInr}
-                              </span>
-                              <span className="text-xs font-semibold text-stone-500 ml-1">INR</span>
-                              <span className={`text-xs line-through ml-2 ${mutedText}`}>
-                                {pkg.originalInr}
-                              </span>
-                            </div>
-                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-600/15 text-emerald-800 dark:text-emerald-400 font-bold border border-emerald-600/30">
-                              {pkg.discount}
-                            </span>
-                          </div>
-
-                          <div className="mt-2 pt-2 border-t border-dashed border-stone-300 dark:border-stone-800 flex items-center justify-between text-xs">
-                            <span className={mutedText}>International (USD):</span>
-                            <div>
-                              <span className={`font-bold text-sm ${headingText}`}>{pkg.priceUsd} USD</span>
-                              <span className={`line-through text-[11px] ml-1.5 ${mutedText}`}>{pkg.originalUsd}</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Deliverables List */}
-                        <ul className={`text-xs space-y-2.5 mb-8 ${bodyText}`}>
-                          {pkg.features.map((feat, fIdx) => (
-                            <li key={fIdx} className="flex items-start space-x-2">
-                              <span className="text-[#946B1D] dark:text-[#CCA04F] font-bold mt-0.5">✓</span>
-                              <span className="leading-relaxed">{feat}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <button
-                        onClick={() => handleSelectPackage(pkg.title, pkg.priceInr, pkg.priceUsd)}
-                        className="w-full py-3 rounded-xl gold-gradient text-white font-bold text-xs uppercase tracking-wider hover:brightness-105 transition shadow-md"
-                      >
-                        Book Now ({pkg.priceInr} / {pkg.priceUsd})
-                      </button>
-                    </div>
-                  ))}
-                </div>
-
-                <div className={`mt-8 p-4 rounded-xl border text-center text-xs max-w-3xl mx-auto ${cardBg} ${mutedText}`}>
-                  <p>
-                    All consultations include dedicated preliminary blueprint analysis, coordinate alignment, and a secure follow-up summary. Custom quotes available for mega industrial zones exceeding 100,000 sq ft.
-                  </p>
-                </div>
               </div>
             </section>
 
@@ -1363,32 +912,16 @@
                 ) : (
                   <form onSubmit={handleBookingSubmit} className={`p-8 rounded-2xl border space-y-6 ${cardBg}`}>
                     
-                    <div className={`flex flex-wrap items-center justify-between pb-4 border-b ${borderSubtle} gap-4`}>
-                      <div>
-                        <span className="text-xs font-bold text-[#735010] dark:text-[#CCA04F] uppercase tracking-wider block">
-                          Accepted Payment Currency:
-                        </span>
-                        <span className={`text-xs ${mutedText}`}>Payment details provided upon manual schedule verification</span>
-                      </div>
-                      <div className="flex space-x-2">
-                        {["INR & USD (Dual)", "₹ INR Only", "$ USD Only"].map((cur) => (
-                          <button
-                            key={cur}
-                            type="button"
-                            onClick={() => setPreferredCurrency(cur)}
-                            className={`px-3 py-1 rounded text-xs font-bold transition ${
-                              preferredCurrency === cur ? 'gold-gradient text-white' : 'bg-[#EAE5DA] dark:bg-stone-800 text-stone-700 dark:text-stone-300'
-                            }`}
-                          >
-                            {cur}
-                          </button>
-                        ))}
-                      </div>
+                    <div className={`pb-4 border-b ${borderSubtle}`}>
+                      <span className="text-xs font-bold text-[#735010] dark:text-[#CCA04F] uppercase tracking-wider block">
+                        Consultation Scope & Tailored Advisory:
+                      </span>
+                      <span className={`text-xs ${mutedText}`}>Confidential evaluation tailored to residential, industrial, and commercial properties.</span>
                     </div>
 
                     <div>
                       <label className="block text-xs font-bold text-[#735010] dark:text-[#CCA04F] uppercase tracking-wider mb-2">
-                        Select Consultancy Package (Prices in ₹ INR & $ USD) *
+                        Select Consultation Scope / Service *
                       </label>
                       <select
                         name="service"
@@ -1397,38 +930,26 @@
                         required
                         className={`w-full p-3.5 rounded-xl border text-xs focus:border-[#B58934] outline-none ${inputBg}`}
                       >
-                        <option value="Industrial & Factory Comprehensive Vastu Audit (₹24,999 / $349)">
-                          Industrial & Factory Comprehensive Vastu Audit — ₹24,999 INR / $349 USD
+                        <option value="Industrial & Factory Comprehensive Vastu Audit">
+                          Industrial & Factory Comprehensive Vastu Audit
                         </option>
-                        <option value="Commercial Office & Corporate Vastu Audit (₹12,999 / $189)">
-                          Commercial Office & Corporate Vastu Audit — ₹12,999 INR / $189 USD
+                        <option value="Commercial Office & Corporate Vastu Audit">
+                          Commercial Office & Corporate Vastu Audit
                         </option>
-                        <option value="Residential Vastu & Astro-Vastu Audit (₹7,999 / $119)">
-                          Residential Vastu & Astro-Vastu Audit — ₹7,999 INR / $119 USD
+                        <option value="Residential Vastu & Non-Demolition Energy Alignment">
+                          Residential Vastu & Non-Demolition Energy Alignment
                         </option>
-                        <option value="Classical Vedic & KP Astrology Consultation (₹2,499 / $49)">
-                          Classical Vedic & KP Astrology Consultation — ₹2,499 INR / $49 USD
+                        <option value="Comprehensive Astro-Vastu Synergy Audit">
+                          Comprehensive Astro-Vastu Synergy Audit
                         </option>
-                        <option value="Business, Wealth & Career Blueprint (₹1,499 / $29)">
-                          Business, Wealth & Career Blueprint — ₹1,499 INR / $29 USD
+                        <option value="Classical Vedic & KP Astrology Consultation">
+                          Classical Vedic & KP Astrology Consultation
                         </option>
-                        <option value="Yearly Varshphal & KP Planetary Transit Report (₹999 / $19)">
-                          Yearly Varshphal & KP Planetary Transit Report — ₹999 INR / $19 USD
+                        <option value="Turnkey Executive & Corporate Advisory">
+                          Turnkey Executive & Corporate Advisory
                         </option>
-                        <option value="Academy: Industrial & Commercial Vastu Masterclass (₹18,500 / $249)">
-                          Academy: Industrial & Commercial Vastu Masterclass — ₹18,500 INR / $249 USD
-                        </option>
-                        <option value="Academy: Complete 3-in-1 Vastu Masterclass (₹16,999 / $219)">
-                          Academy: Complete 3-in-1 Vastu Masterclass — ₹16,999 INR / $219 USD
-                        </option>
-                        <option value="Academy: KP Astrology & Cuspal Interlink Certification (₹14,999 / $199)">
-                          Academy: KP Astrology & Cuspal Interlink — ₹14,999 INR / $199 USD
-                        </option>
-                        <option value="Academy: Nadi & Planetary Transits Intensive (₹8,999 / $119)">
-                          Academy: Nadi & Planetary Transits Intensive — ₹8,999 INR / $119 USD
-                        </option>
-                        <option value="Academy: Jaimini Astrology & Chara Dasha Masterclass (₹7,999 / $99)">
-                          Academy: Jaimini Astrology & Chara Dasha — ₹7,999 INR / $99 USD
+                        <option value="Vedic Wisdom Academy: Professional Training Program">
+                          Vedic Wisdom Academy: Professional Training Program
                         </option>
                       </select>
                     </div>
